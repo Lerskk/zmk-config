@@ -76,11 +76,11 @@
 
             bindings = <
             &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                          &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-            &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6   &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp TAB        &kp B    &kp L       &kp D       &kp W       &kp Z                                                                      &kp SQT  &kp F   &kp O       &kp U       &kp J       &kp BSLH
-            &kp ESC        &kp N    &kp R       &kp T       &kp S       &kp G                                                                      &kp Y    &kp H   &kp A       &kp E       &kp I       &kp SQT
-            &kp GRAVE      &kp Q    &kp X       &kp M       &kp C       &kp V   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &kp K    &kp P   &kp DOT     &kp COMMA   &kp FSLH    &kp PG_UP
-            &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp RALT  &kp RET   &kp SPACE            &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+            &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                         &kp N6   &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
+            &kp TAB        &kp B    &kp L       &kp D       &kp W       &kp Z                                                                          &kp SQT  &kp F   &kp O       &kp U       &kp J       &kp BSLH
+            &kp ESC        &kp N    &kp R       &kp T       &kp S       &kp G                                                                          &kp Y    &kp H   &kp A       &kp E       &kp I       &kp SQT
+            &kp GRAVE      &kp Q    &kp X       &kp M       &kp C       &kp V   &kp ENTER  &kp LEFT   &kp RIGHT &kp DOWN  &kp UP       &kp ESC         &kp K    &kp P   &kp DOT     &kp COMMA   &kp FSLH    &kp PG_UP
+            &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp SPACE  &kp TAB    &kp LALT  &kp RALT  &kp DELETE   &kp BACKSPACE            &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
             >;
         };
 
