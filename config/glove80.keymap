@@ -15,32 +15,19 @@
 #define DEFAULT 0
 #define LOWER 1
 #define MAGIC 2
-#define QWERTY 3
 
 / {
     behaviors {
-        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
-        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-
-      #ifndef PINKY_FINGER_MOD
-       #define PINKY_FINGER_MOD LGUI
-      #endif
-
-      #ifndef RING1_FINGER_MOD
-       #define RING1_FINGER_MOD LAlT
-      #endif
-
-      #ifndef RING2_FINGER_MOD
-       #define RING2_FINGER_MOD RALT
-      #endif
-
-      #ifndef MIDDY_FINGER_MOD
-       #define MIDDY_FINGER_MOD LSFT
-      #endif
-
-      #ifndef INDEX_FINGER_MOD
-       #define INDEX_FINGER_MOD LCTL
-      #endif
+      left_pinky: homey_left_pinky {
+        compatible = "zmk,behavior-hold-tap";
+        flavor = "tap-preferred";
+        hold-trigger-on-release; // wait for other home row mods
+        tapping-term-ms = <200>;
+        quick-tap-ms = <260>;
+        require-prior-idle-ms = <125>;
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
     };
 
     macros {
@@ -79,26 +66,8 @@
 
     keymap {
         compatible = "zmk,keymap";
-        base_layer {
-            // ---------------------------------------------------------------------------------------------------------------------------------
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
-            // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
-            // |  TAB  |  B  |  L  |  D   |  W   |  Z   |                                                 |  '   |   F   |   O   |  U   |   J   |   \  |
-            // |  ESC  |  N  |  R  |  T   |  S   |  G   |                                                 |  Y   |   H   |   A   |  E   |   I   |   '  |
-            // |   `   |  Q  |  X  |  M   |  C   |  V   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  K   |   P   |   .   |  ,   |   /   | PGUP |
-            // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
-            bindings = <
-            &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                          &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-            &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                         &kp N6   &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-            &kp TAB        &kp B    &kp L       &kp D       &kp W       &kp Z                                                                          &kp SQT  &kp F   &kp O       &kp U       &kp J       &kp BSLH
-            &kp ESC        &mt LGUI N    &mt LALT R       &mt LSHFT T       &mt LCTRL S       &kp G                                                                          &kp Y    &mt RCTRL H   &mt RSHFT A       &mt LALT E       &mt LGUI I       &kp SQT
-            &kp GRAVE      &kp Q    &kp X       &kp M       &kp C       &kp V   &kp ENTER  &kp LEFT   &kp RIGHT &kp DOWN  &kp UP       &kp ESC         &kp K    &kp P   &kp DOT     &kp COMMA   &kp FSLH    &kp PG_UP
-            &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp SPACE  &kp TAB    &kp LALT  &kp RALT  &kp DELETE   &kp BACKSPACE            &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
-            >;
-        };
-
-        qwerty_layer {
+        default_layer {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
             // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
