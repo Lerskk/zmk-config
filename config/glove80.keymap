@@ -27,6 +27,30 @@
         bindings = <&kp>, <&kp>;
         hold-trigger-key-positions = <1>;    // <---[[the W key]]
      };
+
+    #define RIGHT_HAND_KEYS     \
+                                           5  6  7  8  9 \
+                                       16 17 18 19 20 21 \
+                                       28 29 30 31 32 33 \
+                                       40 41 42 43 44 45 \
+                                       58 59 60 61 62 63 \
+                                          75 76 77 78 79
+    #define THUMB_KEYS          \
+                        69 52       57 74                \
+                         70 53     56 73                 \
+                          71 54   55 72
+
+    left_pinky: homey_left_pinky {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "tap-preferred";
+      hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+      hold-trigger-on-release; // wait for other home row mods
+      tapping-term-ms = <270>;
+      quick-tap-ms = <300>;
+      require-prior-idle-ms = <230>;
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+    };
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
         layer_td: tap_dance_0 {
