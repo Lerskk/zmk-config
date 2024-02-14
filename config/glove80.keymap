@@ -19,7 +19,9 @@
 
 / {
     behaviors {
-      // define mod per key
+        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
+        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
+
       #ifndef PINKY_FINGER_MOD
        #define PINKY_FINGER_MOD LGUI
       #endif
@@ -39,92 +41,12 @@
       #ifndef INDEX_FINGER_MOD
        #define INDEX_FINGER_MOD LCTL
       #endif
-
-      // assign mods to each side
-
-      #ifndef LEFT_PINKY_MOD
-      #define LEFT_PINKY_MOD PINKY_FINGER_MOD
-      #endif
-      #ifndef RIGHT_PINKY_MOD
-      #define RIGHT_PINKY_MOD PINKY_FINGER_MOD
-      #endif
-
-      #ifndef LEFT_RING1_MOD
-      #define LEFT_RING1_MOD RING1_FINGER_MOD
-      #endif
-      #ifndef  RIGHT_RING1_MOD
-      #define RIGHT_RING1_MOD RING1_FINGER_MOD
-      #endif
-
-      #ifndef LEFT_RING2_MOD
-      #define LEFT_RING2_MOD RING2_FINGER_MOD
-      #endif
-      #ifndef RIGHT_RING2_MOD
-      #define RIGHT_RING2_MOD RING2_FINGER_MOD
-      #endif
-
-      #ifndef LEFT_MIDDY_MOD
-      #define LEFT_MIDDY_MOD MIDDY_FINGER_MOD
-      #endif
-      #ifndef RIGHT_MIDDY_MOD
-      #define RIGHT_MIDDY_MOD MIDDY_FINGER_MOD
-      #endif
-
-      #ifndef LEFT_INDEX_MOD
-      #define LEFT_INDEX_MOD INDEX_FINGER_MOD
-      #endif
-      #ifndef RIGHT_INDEX_MOD
-      #define RIGHT_INDEX_MOD INDEX_FINGER_MOD
-      #endif
-
-      // left_pinky: homey_left_pinky {
-      //   compatible = "zmk,behavior-hold-tap";
-      //   flavor = LEFT_PINKY_HOLDING_TYPE;
-      //   hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-      //   hold-trigger-on-release; // wait for other home row mods
-      //   tapping-term-ms = <LEFT_PINKY_HOLDING_TIME>;
-      //   #ifdef ENABLE_KEY_REPEAT
-      //   quick-tap-ms = <LEFT_PINKY_REPEAT_DECAY>;
-      //   #endif
-      //   require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
-      //   #binding-cells = <2>;
-      //   #ifdef ENFORCE_BILATERAL
-      //   bindings = <&left_pinky_hold>, <&kp>;
-      //   #else
-      //   bindings = <&kp>, <&kp>;
-      //   #endif
-      // };
-
-      // #define LeftPinky(key) left_pinky LEFT_PINKY_MOD key
-      // #define LeftPinky(key) left_pinky LEFT_PINKY_MOD key
-      // #define LeftPinky(key) left_pinky LEFT_PINKY_MOD key
-      // #define LeftPinky(key) left_pinky LEFT_PINKY_MOD key
-      // #define LeftPinky(key) left_pinky LEFT_PINKY_MOD key
-
-      // right_pinky: homey_right_pinky {
-      //   compatible = "zmk,behavior-hold-tap";
-      //   flavor = RIGHT_PINKY_HOLDING_TYPE;
-      //   hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
-      //   hold-trigger-on-release; // wait for other home row mods
-      //   tapping-term-ms = <RIGHT_PINKY_HOLDING_TIME>;
-      //   #ifdef ENABLE_KEY_REPEAT
-      //   quick-tap-ms = <RIGHT_PINKY_REPEAT_DECAY>;
-      //   #endif
-      //   require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
-      //   #binding-cells = <2>;
-      //   #ifdef ENFORCE_BILATERAL
-      //   bindings = <&right_pinky_hold>, <&kp>;
-      //   #else
-      //   bindings = <&kp>, <&kp>;
-      //   #endif
-      // };
-
-      // #define RightPinky(key) right_pinky RIGHT_PINKY_MOD key
-      // #define RightPinky(key) right_pinky RIGHT_PINKY_MOD key
-      // #define RightPinky(key) right_pinky RIGHT_PINKY_MOD key
-      // #define RightPinky(key) right_pinky RIGHT_PINKY_MOD key
-      // #define RightPinky(key) right_pinky RIGHT_PINKY_MOD key
-      // };
+        layer_td: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo LOWER>, <&to LOWER>;
+        };
     };
 
     macros {
