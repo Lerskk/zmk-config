@@ -64,7 +64,16 @@
       bindings = <&kp>, <&kp>;
     };
     #define LeftPinky(key) left_pinky PINKY_FINGER_MOD key
+    #define LeftRing1(key) left_pinky RING1_FINGER_MOD key
+    #define LeftRing2(key) left_pinky RING2_FINGER_MOD key
+    #define LeftMiddy(key) left_pinky MIDDY_FINGER_MOD key
+    #define LeftIndex(key) left_pinky INDEX_FINGER_MOD key
 
+    #define RightPinky(key) left_pinky PINKY_FINGER_MOD key
+    #define RightRing1(key) left_pinky RING1_FINGER_MOD key
+    #define RightRing2(key) left_pinky RING2_FINGER_MOD key
+    #define RightMiddy(key) left_pinky MIDDY_FINGER_MOD key
+    #define RightIndex(key) left_pinky INDEX_FINGER_MOD key
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
         layer_td: tap_dance_0 {
