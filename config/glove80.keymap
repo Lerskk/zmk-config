@@ -18,15 +18,26 @@
 
 / {
     behaviors {
-      pht: positional_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        flavor = "hold-preferred";
-        tapping-term-ms = <400>;
-        quick-tap-ms = <200>;
-        bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <1>;    // <---[[the W key]]
-     };
+
+    #ifndef PINKY_FINGER_MOD
+    #define PINKY_FINGER_MOD LGUI
+    #endif
+
+    #ifndef RING1_FINGER_MOD
+    #define RING1_FINGER_MOD LALT
+    #endif
+
+    #ifndef RING2_FINGER_MOD
+    #define RING2_FINGER_MOD RALT
+    #endif
+
+    #ifndef MIDDY_FINGER_MOD
+    #define MIDDY_FINGER_MOD LCTL
+    #endif
+
+    #ifndef INDEX_FINGER_MOD
+    #define INDEX_FINGER_MOD LSFT
+    #endif
 
     #define RIGHT_HAND_KEYS     \
                                            5  6  7  8  9 \
@@ -51,6 +62,8 @@
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
     };
+    #define LeftPinky(key) left_pinky PINKY_FINGER_MOD key
+
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
         layer_td: tap_dance_0 {
@@ -65,6 +78,7 @@
         bt_0: bt_profile_macro_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+
             bindings
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 0>;
