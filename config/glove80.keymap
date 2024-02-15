@@ -86,7 +86,7 @@
       label = "LAYER_TAP_DANCE";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&mo LAYER_Lower>, <&to LAYER_Lower>;
+      bindings = <&mo LOWER>, <&to LOWER>;
     };
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
         // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
