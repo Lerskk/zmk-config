@@ -33,11 +33,11 @@
     #endif
 
     #ifndef MIDDY_FINGER_MOD
-    #define MIDDY_FINGER_MOD LCTL
+    #define MIDDY_FINGER_MOD LSFT
     #endif
 
     #ifndef INDEX_FINGER_MOD
-    #define INDEX_FINGER_MOD LSFT
+    #define INDEX_FINGER_MOD LCTL
     #endif
 
     #define RIGHT_HAND_KEYS     \
