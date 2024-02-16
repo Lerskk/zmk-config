@@ -185,7 +185,7 @@
         &kp TAB     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &RightRing1(U)  &kp J       &kp BSLH
         &kp CAPS    &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp SEMI
         &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &kp UP               &kp DOWN              &lower      &lower    &kp LEFT                   &kp RIGHT   &kp K     &kp P            &kp DOT          &kp COMMA        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp LEFT        &kp RIGHT                       &thumb NUMBER  TAB   &thumb CURSOR SPACE   &kp ENTER   &kp DEL   &thumb SYMBOLS BACKSPACE   &kp ESC               &kp UP           &kp DOWN         &kp LBKT         &kp RBKT   &kp PG_DN
+        &mo MAGIC   &kp HOME &kp END   &kp LEFT        &kp RIGHT                       &thumb CURSOR TAB    &thumb NUMBER SPACE   &kp ENTER   &kp DEL   &thumb SYMBOLS BACKSPACE   &kp ESC               &kp UP           &kp DOWN         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
@@ -203,8 +203,8 @@
         &none       &kp GRAVE   &kp LPAR    &kp RPAR    &kp SEMI   &kp COMMA                                                                        &none      &none                  &none                  &none                  &none                  &none
         &kp EXCL    &kp LBRC    &kp SQT     &kp DQT     &kp RBRC   &kp QMARK                                                                        &kp SEMI   &kp INDEX_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp PINKY_FINGER_MOD   &none
         &kp HASH    &kp CARET   &kp EQUAL   &kp UNDER   &kp DLLR   &kp ASTRK                                                                        &kp DOT    &kp BSPC               &kp TAB                &kp SPACE              &kp ENTER              &none
-        &kp GRAVE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp BSLH    &kp DOT     &kp ASTRK   &none          &none   &none     &kp FSLH   &kp DEL                &kp LS(TAB)            &none                  &none                  &none
-        &kp AT      &kp AMPS    &kp LBKT    &kp RBKT    &kp PLUS               &kp PRCNT   &kp COLON   &kp SEMI    &tog SYMBOLS   &none   &none                &kp LPAR               &kp LBRC               &kp RBRC               &kp RPAR               &none
+        &kp GRAVE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp BSLH    &kp DOT     &kp ASTRK   &tog SYMBOLS   &none   &none     &kp FSLH   &kp DEL                &kp LS(TAB)            &none                  &none                  &none
+        &kp AT      &kp AMPS    &kp LBKT    &kp RBKT    &kp PLUS               &kp PRCNT   &kp COLON   &kp SEMI    &note          &none   &none                &kp LPAR               &kp LBRC               &kp RBRC               &kp RPAR               &none
         >;
     };
 
@@ -222,8 +222,8 @@
         &none       &none                  &none                  &none                  &kp DEL                &kp INS                                                                            &none   &none      &none       &none       &none      &none
         &kp LC(K)   &sk LSHFT              &kp LC(LS(Z))          &kp LC(Z)              &kp BSPC               &kp LC(X)                                                                          &none   &none      &none       &none       &none      &none
         &kp LC(L)   &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp LC(C)                                                                          &none   &kp LEFT   &kp UP      &kp RIGHT   &kp DOWN   &none
-        &kp LC(G)   &kp LC(F)              &none                  &none                  &kp LC(A)              &kp LC(V)   &kp TAB   &none   &none         &none          &none   &none           &none   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
-        &kp LC(H)   &kp LC(LS(G))          &none                  &none                  &kp LC(G)                          &none     &none   &tog CURSOR   &tog CURSOR    &none   &tog SYMBOLS            &none      &none       &none       &none      &none
+        &kp LC(G)   &kp LC(F)              &none                  &none                  &kp LC(A)              &kp LC(V)   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none           &none   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
+        &kp LC(H)   &kp LC(LS(G))          &none                  &none                  &kp LC(G)                          &none     &none   &none         &none          &none   &none           &none      &none       &none       &none      &none
         >;
     };
 
@@ -279,8 +279,8 @@
         &none   &none   &none   &none   &none   &none                                                                                  &none   &none   &none   &none   &none   &none
         &none   &none   &none   &none   &none   &none                                                                                  &none   &none   &none   &none   &none   &none
         &none   &none   &none   &none   &none   &none                                                                                  &none   &none   &none   &none   &none   &none
-        &none   &none   &none   &none   &none   &none   &none         &none         &none        &none         &none   &none           &none   &none   &none   &none   &none   &none
-        &none   &none   &none   &none   &none           &tog CURSOR   &tog NUMBER   &tog LOWER   &tog LOWER    &none   &tog SYMBOLS            &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none   &none   &none         &none         &tog LOWER   &tog LOWER    &none   &none           &none   &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none           &tog CURSOR   &tog NUMBER   &none        &none         &none   &tog SYMBOLS            &none   &none   &none   &none   &none
         >;
     };
 
