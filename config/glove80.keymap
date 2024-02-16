@@ -129,6 +129,24 @@
   #define FNEX LT(G) 
 
   #define SALL LT(A) 
+
+
+  cappy: capsword_and_capslock {
+    compatible = "zmk,behavior-hold-tap";
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    #binding-cells = <2>;
+    bindings = <&kp>, <&caps_word>;
+  };
+
+
+  behavior_caps_word {
+    continue-list = <
+      UNDERSCORE MINUS
+      BACKSPACE DELETE
+      N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+    >;
+  };
       // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
       // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
       layer_td: tap_dance_0 {
@@ -199,7 +217,7 @@
         &kp F1      &kp F2             &kp F3          &kp F4          &kp F5                                                                                                                           &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &kp TAB     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &RightRing1(U)  &kp J       &kp BSLH
-        &kp CAPS    &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp SEMI
+        &cappy CAPSLOCK 0    &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp SEMI
         &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &kp UP               &kp DOWN              &lower      &lower    &kp LEFT                   &kp RIGHT   &kp K     &kp P            &kp DOT          &kp COMMA        &kp FSLH   &kp PG_UP
         &mo MAGIC   &kp HOME &kp END   &kp LEFT        &kp RIGHT                       &thumb CURSOR TAB    &thumb NUMBER SPACE   &kp ENTER   &kp DEL   &thumb SYMBOLS BACKSPACE   &kp ESC               &kp UP           &kp DOWN         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
@@ -254,9 +272,9 @@
 
         bindings = <
         &none       &none                  &none                  &none                  &none                                                                                                          &none      &none      &none       &none       &none
-        &none       &kp Y                  &kp D                  &kp E                  &kp F                  &none                                                                       &kp CARET   &kp HASH   &kp DLLR   &kp TILDE   &kp EXCL    &kp PIPE
-        &none       &kp X                  &kp A                  &kp B                  &kp C                  &kp UNDER                                                                   &kp PRCNT   &kp N7     &kp N8     &kp N9      &kp COLON   &kp K
-        &none       &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &none                                                                       &kp PLUS    &kp N4     &kp N5     &kp N6      &kp MINUS   &kp J
+        &none       &none                  &kp D                  &kp E                  &kp F                  &none                                                                       &kp CARET   &kp HASH   &kp DLLR   &kp TILDE   &kp EXCL    &kp PIPE
+        &none       &kp X                  &kp A                  &kp B                  &kp C                  &kp Y                                                                       &kp PRCNT   &kp N7     &kp N8     &kp N9      &kp COLON   &kp K
+        &none       &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp UNDER                                                                   &kp PLUS    &kp N4     &kp N5     &kp N6      &kp MINUS   &kp J
         &none       &sk LSHFT              &kp LC(Z)              &kp BACKSPACE          &kp SPACE              &kp TAB     &none   &none   &none         &kp LT      &kp GT    &kp EQUAL   &kp ASTRK   &kp N1     &kp N2     &kp N3      &kp FSLH    &kp LS(G)
         &none       &none                  &kp LC(LS(Z))          &kp DEL                &kp ENTER                          &none   &none   &tog NUMBER   &kp COMMA   &kp DOT   &kp N0                  &trans     &trans     &trans      &trans      &kp AT
         >;
