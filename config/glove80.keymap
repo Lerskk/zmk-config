@@ -113,6 +113,22 @@
     tapping-term-ms = <200>;
     bindings = <&mo LOWER>, <&to LOWER>;
   };
+
+  #define UNDO LT(Z) 
+  #define REDO LT(LS(Z)) 
+
+  #define SBAR LT(K) 
+  #define SURL LT(L) 
+
+  #define CUT LT(X) 
+  #define COPY LT(C) 
+  #define PASTE LT(V) 
+
+  #define FIND LT(F) 
+  #define FPRE LT(LS(G)) 
+  #define FNEX LT(G) 
+
+  #define SALL LT(A) 
       // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
       // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
       layer_td: tap_dance_0 {
@@ -218,12 +234,12 @@
         // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
         bindings = <
-        &none       &none                  &none                  &none                  &none                                                                                                             &none      &none       &none       &none      &none
-        &none       &none                  &none                  &none                  &kp DEL                &kp INS                                                                            &none   &none      &none       &none       &none      &none
-        &kp LC(K)   &sk LSHFT              &kp LC(LS(Z))          &kp LC(Z)              &kp BSPC               &kp LC(X)                                                                          &none   &none      &none       &none       &none      &none
-        &kp LC(L)   &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp LC(C)                                                                          &none   &kp LEFT   &kp UP      &kp RIGHT   &kp DOWN   &none
-        &kp LC(G)   &kp LC(F)              &none                  &none                  &kp LC(A)              &kp LC(V)   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none           &none   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
-        &kp LC(H)   &kp LC(LS(G))          &none                  &none                  &kp LC(G)                          &none     &none   &none         &none          &none   &none           &none      &none       &none       &none      &none
+        &none       &none                  &none                  &none                  &none                                                                                                         &none      &none       &none       &none      &none
+        &none       &none                  &none                  &none                  &kp DEL                &kp INS                                                                    &kp INS     &kp DEL    &none       &none       &none      &none
+        &kp SBAR    &sk LSHFT              &kp REDO               &kp UNDO               &kp BSPC               &kp CUT                                                                    &kp CUT     &kp BSPC   &kp UNDO    &kp REDO    &sk LSHFT  &kp SBAR
+        &kp SURL    &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp COPY                                                                   &kp COPY    &kp LEFT   &kp UP      &kp DOWN    &kp RIGHT  &kp SURL
+        &kp LC(G)   &kp LC(F)              &none                  &none                  &kp SALL               &kp PASTE   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none   &kp PASTE   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
+        &kp LC(H)   &kp FPRE               &none                  &none                  &kp FNEX                           &none     &none   &none         &none          &none   &none               &none      &none       &none       &none      &none
         >;
     };
 
