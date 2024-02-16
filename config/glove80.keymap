@@ -114,21 +114,21 @@
     bindings = <&mo LOWER>, <&to LOWER>;
   };
 
-  #define UNDO LT(Z) 
-  #define REDO LT(LS(Z)) 
+  #define UNDO LC(Z) 
+  #define REDO LC(LS(Z)) 
 
-  #define SBAR LT(K) 
-  #define SURL LT(L) 
+  #define SBAR LC(K) 
+  #define SURL LC(L) 
 
-  #define CUT LT(X) 
-  #define COPY LT(C) 
-  #define PASTE LT(V) 
+  #define CUT LC(X) 
+  #define COPY LC(C) 
+  #define PASTE LC(V) 
 
-  #define FIND LT(F) 
-  #define FPRE LT(LS(G)) 
-  #define FNEX LT(G) 
+  #define FIND LC(F) 
+  #define FPRE LC(LS(G)) 
+  #define FNEX LC(G) 
 
-  #define SALL LT(A) 
+  #define SALL LC(A) 
 
 
   cappy: capsword_and_capslock {
