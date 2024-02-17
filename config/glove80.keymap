@@ -29,142 +29,158 @@
 / {
   behaviors {
 
-  #ifndef PINKY_FINGER_MOD
-  #define PINKY_FINGER_MOD LGUI
-  #endif
+    #ifndef PINKY_FINGER_MOD
+    #define PINKY_FINGER_MOD LGUI
+    #endif
 
-  #ifndef RING1_FINGER_MOD
-  #define RING1_FINGER_MOD LALT
-  #endif
+    #ifndef RING1_FINGER_MOD
+    #define RING1_FINGER_MOD LALT
+    #endif
 
-  #ifndef RING2_FINGER_MOD
-  #define RING2_FINGER_MOD RALT
-  #endif
+    #ifndef RING2_FINGER_MOD
+    #define RING2_FINGER_MOD RALT
+    #endif
 
-  #ifndef MIDDY_FINGER_MOD
-  #define MIDDY_FINGER_MOD LSFT
-  #endif
+    #ifndef MIDDY_FINGER_MOD
+    #define MIDDY_FINGER_MOD LSFT
+    #endif
 
-  #ifndef INDEX_FINGER_MOD
-  #define INDEX_FINGER_MOD LCTL
-  #endif
+    #ifndef INDEX_FINGER_MOD
+    #define INDEX_FINGER_MOD LCTL
+    #endif
 
-  #define RIGHT_HAND_KEYS     \
-                                         5  6  7  8  9 \
-                                     16 17 18 19 20 21 \
-                                     28 29 30 31 32 33 \
-                                     40 41 42 43 44 45 \
-                                     58 59 60 61 62 63 \
-                                        75 76 77 78 79
-  #define THUMB_KEYS          \
-                      69 52       57 74                \
-                       70 53     56 73                 \
-                        71 54   55 72
+    #define RIGHT_HAND_KEYS     \
+                                           5  6  7  8  9 \
+                                       16 17 18 19 20 21 \
+                                       28 29 30 31 32 33 \
+                                       40 41 42 43 44 45 \
+                                       58 59 60 61 62 63 \
+                                          75 76 77 78 79
+    #define THUMB_KEYS          \
+                        69 52       57 74                \
+                         70 53     56 73                 \
+                          71 54   55 72
 
-  #ifndef HOMEY_HOLDING_TYPE
-  #define HOMEY_HOLDING_TYPE "tap-preferred"
-  #endif
+    #ifndef HOMEY_HOLDING_TYPE
+    #define HOMEY_HOLDING_TYPE "tap-preferred"
+    #endif
 
-  #ifndef HOMEY_HOLDING_TIME
-  #define HOMEY_HOLDING_TIME 250 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
-  #endif
-  
-  #ifndef HOMEY_REPEAT_DECAY
-  #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-  #endif
+    #ifndef HOMEY_HOLDING_TIME
+    #define HOMEY_HOLDING_TIME 250 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #endif
+    
+    #ifndef HOMEY_REPEAT_DECAY
+    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
 
-  left_pinky: homey_left_pinky {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = HOMEY_HOLDING_TYPE;
-    hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-    hold-trigger-on-release; // wait for other home row mods
-    tapping-term-ms = <HOMEY_HOLDING_TIME>;
-    quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-    require-prior-idle-ms = <230>;
-    #binding-cells = <2>;
-    bindings = <&kp>, <&kp>;
-  };
-  homey_fast: homey_fast {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = HOMEY_HOLDING_TYPE;
-    hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-    hold-trigger-on-release; // wait for other home row mods
-    tapping-term-ms = <HOMEY_HOLDING_TIME>;
-    quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-    require-prior-idle-ms = <75>;
-    #binding-cells = <2>;
-    bindings = <&kp>, <&kp>;
-  };
-  #define LeftPinky(key) left_pinky PINKY_FINGER_MOD key
-  #define LeftRing1(key) left_pinky RING1_FINGER_MOD key
-  #define LeftRing2(key) left_pinky RING2_FINGER_MOD key
-  #define LeftMiddy(key) homey_fast MIDDY_FINGER_MOD key
-  #define LeftIndex(key) homey_fast INDEX_FINGER_MOD key
+    left_pinky: homey_left_pinky {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = HOMEY_HOLDING_TYPE;
+      hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+      hold-trigger-on-release; // wait for other home row mods
+      tapping-term-ms = <HOMEY_HOLDING_TIME>;
+      quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+      require-prior-idle-ms = <230>;
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+    };
+    homey_fast: homey_fast {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = HOMEY_HOLDING_TYPE;
+      hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+      hold-trigger-on-release; // wait for other home row mods
+      tapping-term-ms = <HOMEY_HOLDING_TIME>;
+      quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+      require-prior-idle-ms = <75>;
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+    };
+    #define LeftPinky(key) left_pinky PINKY_FINGER_MOD key
+    #define LeftRing1(key) left_pinky RING1_FINGER_MOD key
+    #define LeftRing2(key) left_pinky RING2_FINGER_MOD key
+    #define LeftMiddy(key) homey_fast MIDDY_FINGER_MOD key
+    #define LeftIndex(key) homey_fast INDEX_FINGER_MOD key
 
-  #define RightPinky(key) left_pinky PINKY_FINGER_MOD key
-  #define RightRing1(key) left_pinky RING1_FINGER_MOD key
-  #define RightRing2(key) left_pinky RING2_FINGER_MOD key
-  #define RightMiddy(key) homey_fast MIDDY_FINGER_MOD key
-  #define RightIndex(key) homey_fast INDEX_FINGER_MOD key
+    #define RightPinky(key) left_pinky PINKY_FINGER_MOD key
+    #define RightRing1(key) left_pinky RING1_FINGER_MOD key
+    #define RightRing2(key) left_pinky RING2_FINGER_MOD key
+    #define RightMiddy(key) homey_fast MIDDY_FINGER_MOD key
+    #define RightIndex(key) homey_fast INDEX_FINGER_MOD key
 
-  lower: lower {
-    compatible = "zmk,behavior-tap-dance";
-    label = "LAYER_TAP_DANCE";
-    #binding-cells = <0>;
-    tapping-term-ms = <200>;
-    bindings = <&mo LOWER>, <&to LOWER>;
-  };
+    lower: lower {
+      compatible = "zmk,behavior-tap-dance";
+      label = "LAYER_TAP_DANCE";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mo LOWER>, <&to LOWER>;
+    };
 
-  #define UNDO LC(Z) 
-  #define REDO LC(LS(Z)) 
+    #define UNDO LC(Z) 
+    #define REDO LC(LS(Z)) 
 
-  #define SBAR LC(K) 
-  #define SURL LC(L) 
+    #define SBAR LC(K) 
+    #define SURL LC(L) 
 
-  #define CUT LC(X) 
-  #define COPY LC(C) 
-  #define PASTE LC(V) 
+    #define CUT LC(X) 
+    #define COPY LC(C) 
+    #define PASTE LC(V) 
 
-  #define FIND LC(F) 
-  #define FPRE LC(LS(G)) 
-  #define FNEX LC(G) 
+    #define FIND LC(F) 
+    #define FPRE LC(LS(G)) 
+    #define FNEX LC(G) 
 
-  #define SALL LC(A) 
-
-
-  cappy: capsword_and_capslock {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    #binding-cells = <2>;
-    bindings = <&kp>, <&caps_word>;
-  };
+    #define SALL LC(A) 
 
 
-  behavior_caps_word {
-    continue-list = <
-      UNDERSCORE MINUS
-      BACKSPACE DELETE
-      N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
-    >;
-  };
-      // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
-      // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-      layer_td: tap_dance_0 {
-          compatible = "zmk,behavior-tap-dance";
-          #binding-cells = <0>;
-          tapping-term-ms = <200>;
-          bindings = <&mo LOWER>, <&to LOWER>;
-      };
-  };
+    cappy: capsword_and_capslock {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      #binding-cells = <2>;
+      bindings = <&kp>, <&caps_word>;
+    };
 
-  thumb: thumb_layer_access {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = "balanced";
-    tapping-term-ms = <270>;
-    quick-tap-ms = <300>; // enable repeat
-    #binding-cells = <2>;
-    bindings = <&mo>, <&kp>;
+
+    behavior_caps_word {
+      continue-list = <
+        UNDERSCORE MINUS
+        BACKSPACE DELETE
+        N1 N2 N3 N4 N5 N6 N7 N8 N9 N0
+      >;
+    };
+
+    parang_left: left_parenthesis_and_less_than {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp LPAR>, <&kp LT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    parang_right: right_parenthesis_and_greater_than {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp RPAR>, <&kp GT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    thumb: thumb_layer_access {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <270>;
+      quick-tap-ms = <300>; // enable repeat
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+    };
+
+
+    // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
+    // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
+    layer_td: tap_dance_0 {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>;
+        bindings = <&mo LOWER>, <&to LOWER>;
+    };
   };
 
   macros {
@@ -219,8 +235,8 @@
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &kp TAB     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &RightRing1(U)  &kp J       &kp BSLH
         &cappy CAPSLOCK 0    &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp SEMI
-        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION UP   &kp DOWN              &lower      &lower    &kp LEFT                   &kp RIGHT   &kp K     &kp P            &kp DOT          &kp COMMA        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp LEFT        &kp RIGHT                       &thumb CURSOR TAB    &thumb NUMBER SPACE   &kp ENTER   &kp DEL   &thumb SYMBOLS BACKSPACE   &kp ESC               &kp UP           &kp DOWN         &kp LBKT         &kp RBKT   &kp PG_DN
+        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION UP     &kp DOWN              &lower      &lower    &kp LEFT                   &kp RIGHT   &kp K     &kp P            &kp DOT          &kp COMMA        &kp FSLH   &kp PG_UP
+        &mo MAGIC   &kp HOME &kp END   &kp LEFT        &kp RIGHT                       &thumb CURSOR ENTER    &thumb NUMBER SPACE   &kp TAB   &kp DEL   &thumb SYMBOLS BACKSPACE   &kp ESC               &kp UP           &kp DOWN         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
@@ -238,7 +254,7 @@
         &none       &kp GRAVE   &kp LPAR    &kp RPAR    &kp SEMI   &kp COMMA                                                                        &none      &none                  &none                  &none                  &none                  &none
         &kp EXCL    &kp LBRC    &kp SQT     &kp DQT     &kp RBRC   &kp QMARK                                                                        &kp SEMI   &kp INDEX_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp PINKY_FINGER_MOD   &none
         &kp HASH    &kp CARET   &kp EQUAL   &kp UNDER   &kp DLLR   &kp ASTRK                                                                        &kp DOT    &kp BSPC               &kp TAB                &kp SPACE              &kp ENTER              &none
-        &kp GRAVE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp BSLH    &kp DOT     &kp ASTRK   &tog SYMBOLS   &none   &none     &kp FSLH   &kp DEL                &kp LS(TAB)            &none                  &none                  &none
+        &kp TILDE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp BSLH    &kp DOT     &kp ASTRK   &tog SYMBOLS   &none   &none     &kp FSLH   &kp DEL                &kp LS(TAB)            &none                  &none                  &none
         &kp AT      &kp AMPS    &kp LBKT    &kp RBKT    &kp PLUS               &kp PRCNT   &kp COLON   &kp SEMI    &none          &none   &none                &kp LPAR               &kp LBRC               &kp RBRC               &kp RPAR               &none
         >;
     };
