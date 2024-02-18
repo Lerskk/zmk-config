@@ -235,8 +235,8 @@
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &kp TAB     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &RightRing1(U)  &kp J       &kp BSLH
         &cappy CAPSLOCK 0    &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp SEMI
-        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION TAB   &kp DOWN              &lower      &lower    &kp LEFT                   &kp DEL   &kp K     &kp P            &kp DOT          &kp COMMA        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp LEFT        &kp RIGHT                       &thumb CURSOR ENTER    &thumb NUMBER SPACE   &kp ENTER   &kp DEL   &thumb SYMBOLS BACKSPACE   &kp ESC               &kp UP           &kp DOWN         &kp LBKT         &kp RBKT   &kp PG_DN
+        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION TAB    &kp DOWN              &lower      &lower    &kp LEFT                   &kp DEL   &kp K     &kp P            &kp DOT          &kp COMMA        &kp FSLH   &kp PG_UP
+        &mo MAGIC   &kp HOME &kp END   &kp UP          &kp DOWN                       &thumb CURSOR ENTER    &thumb NUMBER SPACE   &lower      &lower    &thumb SYMBOLS BACKSPACE   &kp ESC               &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
@@ -271,10 +271,10 @@
         bindings = <
         &none       &none                  &none                  &none                  &none                                                                                                         &none      &none       &none       &none      &none
         &none       &none                  &none                  &none                  &kp DEL                &kp INS                                                                    &kp INS     &kp DEL    &none       &none       &none      &none
-        &kp SBAR    &sk LSHFT              &kp REDO               &kp UNDO               &kp BSPC               &kp CUT                                                                    &kp CUT     &kp BSPC   &kp UNDO    &kp REDO    &sk LSHFT  &kp SBAR
-        &kp SURL    &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp COPY                                                                   &kp COPY    &kp LEFT   &kp UP      &kp DOWN    &kp RIGHT  &kp SURL
-        &kp LC(G)   &kp LC(F)              &none                  &none                  &kp SALL               &kp PASTE   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none   &kp PASTE   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
-        &kp LC(H)   &kp FPRE               &none                  &none                  &kp FNEX                           &none     &none   &none         &none          &none   &none               &none      &none       &none       &none      &none
+        &kp SBAR    &kp SPACE              &kp REDO               &kp UNDO               &kp BSPC               &kp CUT                                                                    &kp CUT     &kp BSPC   &kp UNDO    &kp REDO    &sk LSHFT  &kp SBAR
+        &kp SURL    &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp COPY                                                                   &kp COPY    &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT  &kp SURL
+        &kp LC(T)   &kp LC(F)              &none                  &none                  &kp SALL               &kp PASTE   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none   &kp PASTE   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
+        &kp LC(W)   &kp FPRE               &none                  &none                  &kp FNEX                           &none     &none   &none         &none          &none   &none               &none      &none       &none       &none      &none
         >;
     };
 
@@ -293,7 +293,7 @@
         &none       &kp X                  &kp A                  &kp B                  &kp C                  &kp Y                                                                       &kp PRCNT   &kp N7     &kp N8     &kp N9      &kp COLON   &kp K
         &none       &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp UNDER                                                                   &kp PLUS    &kp N4     &kp N5     &kp N6      &kp MINUS   &kp J
         &none       &sk LSHFT              &kp LC(Z)              &kp BACKSPACE          &kp SPACE              &kp TAB     &none   &none   &none         &kp LT      &kp GT    &kp EQUAL   &kp ASTRK   &kp N1     &kp N2     &kp N3      &kp FSLH    &kp LS(G)
-        &none       &none                  &kp LC(LS(Z))          &kp DEL                &kp ENTER                          &none   &none   &tog NUMBER   &kp COMMA   &kp DOT   &kp N0                  &trans     &trans     &trans      &trans      &kp AT
+        &none       &none                  &kp LC(LS(Z))          &kp DEL                &kp ENTER                          &none   &none   &tog NUMBER   &kp COMMA   &kp N0    &kp DOT                 &trans     &trans     &trans      &trans      &kp AT
         >;
     };
 
