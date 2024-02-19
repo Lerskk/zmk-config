@@ -70,7 +70,7 @@
     #endif
     
     #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 175 // "tap then hold" for key auto-repeat
+    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #endif
 
     left_pinky: homey_left_pinky {
@@ -80,7 +80,7 @@
       hold-trigger-on-release; // wait for other home row mods
       tapping-term-ms = <HOMEY_HOLDING_TIME>;
       quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-      require-prior-idle-ms = <150>;
+      require-prior-idle-ms = <230>;
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
     };
@@ -226,7 +226,7 @@
         &kp TAB     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &RightRing1(U)  &kp J       &kp BSLH
         &cappy CAPSLOCK 0    &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp SEMI
         &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION TAB    &kp DOWN              &lower      &lower    &kp LEFT                   &kp DEL   &kp K     &kp P            &kp DOT          &kp COMMA        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp UP          &kp DOWN                       &thumb CURSOR ENTER    &thumb NUMBER SPACE   &lower      &lower    &thumb SYMBOLS BACKSPACE   &kp ESC               &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &mo MAGIC   &kp HOME &kp END   &kp UP          &kp DOWN                       &thumb NUMBER SPACE    &thumb CURSOR ENTER   &lower      &lower    &thumb SYMBOLS ESC   &kp BACKSPACE               &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
