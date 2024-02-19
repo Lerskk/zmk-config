@@ -80,7 +80,7 @@
       hold-trigger-on-release; // wait for other home row mods
       tapping-term-ms = <HOMEY_HOLDING_TIME>;
       quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-      require-prior-idle-ms = <230>;
+      require-prior-idle-ms = <125>;
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
     };
