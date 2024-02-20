@@ -32,7 +32,7 @@
     ad_a: adaptive_a {
       compatible = "zmk,behavior-antecedent-morph";
       #binding-cells = <0>;
-        defaults = <&kp A;;>
+        defaults = <&kp A>;
       bindings = <&kp U>, <&kp O>;
         antecedents = <Q Z>;
         max-delay-ms = <250>;
