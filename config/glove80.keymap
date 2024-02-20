@@ -29,6 +29,16 @@
 / {
   behaviors {
 
+    ad_a: adaptive_a {
+      compatible = "zmk,behavior-antecedent-morph";
+      #binding-cells = <0>;
+        defaults = <&kp A;;>
+      bindings = <&kp U>, <&kp O>;
+        antecedents = <Q Z>;
+        max-delay-ms = <250>;
+    };
+
+
     #ifndef PINKY_FINGER_MOD
     #define PINKY_FINGER_MOD LGUI
     #endif
@@ -170,16 +180,6 @@
       #binding-cells = <2>;
       bindings = <&mo>, <&key_repeat>;
     };
-
-      ad_a: adaptive_a {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_A";
-            #binding-cells = <0>;
-			defaults = <&kp A>;
-            bindings = <&kp U>, <&kp O>;
-			antecedents = <Q Z>;
-			max-delay-ms = <250>;
-        };
 
     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
     // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
