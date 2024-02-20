@@ -31,6 +31,7 @@
 
     ad_a: adaptive_a {
       compatible = "zmk,behavior-antecedent-morph";
+      label = "ADAPTIVE_A";
       #binding-cells = <0>;
         defaults = <&kp A>;
       bindings = <&kp U>, <&kp O>;
