@@ -251,7 +251,7 @@
         &none       &none       &none       &none       &none                                                                                                   &none      &none         &none                  &none                  &none
         &none       &none       &none       &none       &none      &none                                                                            &none       &none      &none         &none                  &none                  &none
         &kp EXCL    &kp COMMA   &kp DOT     &kp COLON   &kp SEMI   &kp QMARK                                                                        &none       &kp LBKT   &kp SQT       &kp DQT                &kp RBKT               &none
-        &kp HASH    &kp CARET   &kp EQUAL   &kp UNDER   &kp DLLR   &kp ASTRK                                                                        &kp GRAVE   &kp LPAR   &kp LBR       &kp RBRC               &kp RPAR               &none
+        &kp HASH    &kp CARET   &kp EQUAL   &kp UNDER   &kp DLLR   &kp ASTRK                                                                        &kp GRAVE   &kp LPAR   &kp LBRC      &kp RBRC               &kp RPAR               &none
         &kp TILDE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp TAB     &kp DOT     &kp ASTRK   &tog SYMBOLS   &none   &none     &none       &kp BSPC   &none         &none                  &none                  &none
         &kp PRCNT   &kp AMPS    &kp AT      &kp BSLH    &kp PLUS               &kp SPACE   &kp ENTER   &kp SEMI    &none          &none   &none                 &kp DEL    &kp LS(TAB)   &kp RING1_FINGER_MOD   &kp PINKY_FINGER_MOD   &none
         >;
