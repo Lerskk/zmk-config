@@ -13,7 +13,7 @@
 
 // layers
 #define DEFAULT 0
-#define XONE 0
+#define XONE 1
 #define SYMBOLS 2
 #define CURSOR 3
 #define NUMBER 4
