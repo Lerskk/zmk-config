@@ -86,6 +86,13 @@
       bindings = <&kp>, <&kp>;
     };
 
+    space: great_space {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp SPACE>, <&kp ENTER>;
+      mods = <(MOD_LSFT)>;
+    };
+
     #define LeftPinky(key) left_pinky PINKY_FINGER_MOD key
     #define LeftRing1(key) left_pinky RING1_FINGER_MOD key
     #define LeftRing2(key) left_pinky RING2_FINGER_MOD key
@@ -171,6 +178,17 @@
       #binding-cells = <2>;
       bindings = <&mo>, <&key_repeat>;
     };
+
+    thumb_space: thumb_layer_access_space {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <270>;
+      quick-tap-ms = <300>; // enable repeat
+      #binding-cells = <2>;
+      bindings = <&mo>, <&space>;
+    };
+
+    #define spc_thum(layer) thumb_space 0
 
     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
     // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
