@@ -188,7 +188,7 @@
       bindings = <&mo>, <&space>;
     };
 
-    #define spc_thum(layer) thumb_space 0
+    #define spc_thum(layer) thumb_space layer 0
 
     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
     // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
