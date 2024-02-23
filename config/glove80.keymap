@@ -393,7 +393,7 @@
         &none   &none   &none   &none   &none   &none                                                                                  &none   &none   &none   &none   &none   &none
         &none   &none   &none   &none   &none   &none                                                                                  &none   &none   &none   &none   &none   &none
         &none   &none   &none   &none   &none   &none                                                                                  &none   &none   &none   &none   &none   &none
-        &none   &none   &none   &none   &none   &none   &none         &none         &tog LOWER   &tog LOWER    &tog XONE   &none           &none   &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none   &none   &none         &none         &tog LOWER   &tog LOWER    &none   &none           &none   &none   &none   &none   &none   &none
         &none   &none   &none   &none   &none           &tog CURSOR   &tog NUMBER   &none        &none         &none   &tog SYMBOLS            &none   &none   &none   &none   &none
         >;
     };
