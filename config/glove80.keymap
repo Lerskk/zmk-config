@@ -26,6 +26,10 @@
 #define LAYER_Lower 0
 #endif
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
 
 / {
   behaviors {
