@@ -253,7 +253,7 @@
         &cappy CAPSLOCK 0     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp K   &kp F            &kp O            &RightRing1(U)  &kp J       &kp BSLH
         &kp TAB     &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp RSHFT
         &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION BACKSPACE    &kp DOWN              &lower      &none    &kp LEFT                   &key_repeat   &kp SQT     &kp P            &kp COMMA          &kp DOT        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &spc_thum(NUMBER)    &thumb CURSOR ENTER   &lower      &lower    &thumb SYMBOLS ESC   &kp LSHFT              &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &spc_thum(NUMBER)    &thumb CURSOR ENTER   &lower      &lower    &thumb SYMBOLS ESC   &sk LSHFT              &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
