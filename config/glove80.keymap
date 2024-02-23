@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
@@ -13,10 +14,10 @@
 
 // layers
 #define DEFAULT 0
-#define XONE 1
-#define SYMBOLS 2
-#define CURSOR 3
-#define NUMBER 4
+#define CURSOR 1
+#define MOUSE 2
+#define NUMBER 3
+#define SYMBOLS 4
 #define FUNCTION 5
 #define QWERTY 6
 #define LOWER 7
@@ -256,47 +257,8 @@
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &cappy CAPSLOCK 0     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp K   &kp F            &kp O            &RightRing1(U)  &kp J       &kp BSLH
         &kp TAB     &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp RSHFT
-        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION BACKSPACE    &kp DOWN              &lower      &none    &kp LEFT                   &key_repeat   &kp SQT     &kp P            &kp COMMA          &kp DOT        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &spc_thum(CURSOR)    &thumb NUMBER ENTER   &lower      &lower    &thumb SYMBOLS ESC   &sk LSHFT              &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
-        >;
-    };
-
-
-    xone_layer {
-        // ---------------------------------------------------------------------------------------------------------------------------------
-        // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
-        // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
-        // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
-        // |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
-        // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
-        // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
-
-        bindings = <
-        &kp F1      &kp F2             &kp F3          &kp F4          &kp F5                                                                                                                           &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
-        &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
-        &kp TAB     &kp K              &LeftRing2(Y)   &kp O           &kp SQT           &kp Z                                                                                                  &kp F   &kp C            &kp L            &RightRing1(P)  &kp Q       &kp Z
-        &cappy CAPSLOCK 0     &LeftPinky(H)      &LeftRing1(I)   &LeftMiddy(E)   &LeftIndex(A)   &kp U                                                                                                  &kp D     &RightIndex(S)   &RightMiddy(T)   &RightRing1(N)  &RightPinky(R)       &kp V
-        &kp GRAVE   &kp J    &kp QMARK     &kp UNDER       &kp MINUS       &none           &thumb FUNCTION TAB    &kp DOWN              &lower      &tog XONE    &kp LEFT                   &key_repeat   &kp W     &kp G            &kp M          &kp B        &kp X   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE    &thumb CURSOR ENTER   &lower      &lower    &thumb SYMBOLS ESC   &thumb SYMBOLS BACKSPACE              &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
-        >;
-    };
-
-    symbols_layer {
-        // ---------------------------------------------------------------------------------------------------------------------------------
-        // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
-        // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
-        // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
-        // |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
-        // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
-        // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
-
-        bindings = <
-        &none       &none       &none       &none       &none                                                                                                   &none      &none         &none                  &none                  &none
-        &none       &none       &none       &none       &none      &none                                                                            &none       &none      &none         &none                  &none                  &none
-        &kp EXCL    &kp COMMA   &kp DOT     &kp COLON   &kp SEMI   &kp QMARK                                                                        &none       &kp LBKT   &kp SQT       &kp DQT                &kp RBKT               &none
-        &kp HASH    &kp CARET   &kp EQUAL   &kp UNDER   &kp DLLR   &kp ASTRK                                                                        &kp GRAVE   &kp LPAR   &kp LBRC      &kp RBRC               &kp RPAR               &none
-        &kp TILDE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp TAB     &kp DOT     &kp ASTRK   &tog SYMBOLS   &none   &none     &none       &kp BSPC   &none         &none                  &none                  &none
-        &kp PRCNT   &kp AMPS    &kp AT      &kp BSLH    &kp PLUS               &kp SPACE   &kp ENTER   &kp SEMI    &none          &none   &none                 &kp DEL    &kp LS(TAB)   &kp RING1_FINGER_MOD   &kp PINKY_FINGER_MOD   &none
+        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION BACKSPACE    &kp DOWN   &lower   &none    &kp LEFT                   &key_repeat   &kp SQT     &kp P            &kp COMMA          &kp DOT        &kp FSLH   &kp PG_UP
+        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &spc_thum(CURSOR)    &thumb NUMBER DEL   &lower   &lower   &thumb SYMBOLS ESC   &sk LSHFT              &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
@@ -319,6 +281,25 @@
         >;
     };
 
+    lower_layer {
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
+        // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
+        // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
+        // |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
+        // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
+        // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
+
+        bindings = <
+        &none   &none   &none   &none   &none                                                                         &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none   &none                                                         &none   &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none   &none                                                         &none   &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none   &none                                                         &none   &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none   &none   &mkp MB3   &none      &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
+        &none   &none   &none   &none   &none           &mkp MB1   &mkp MB2   &none   &none   &none   &none           &none   &none   &none   &none   &none
+        >;
+    };
+
     number_layer {
         // ---------------------------------------------------------------------------------------------------------------------------------
         // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
@@ -337,6 +318,26 @@
         &none       &none                  &kp LC(LS(Z))          &kp DEL                &kp ENTER                          &none   &none   &tog NUMBER   &kp COMMA   &kp DOT   &kp N0                  &trans     &trans     &trans      &trans      &kp AT
         >;
     };
+
+    symbols_layer {
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
+        // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
+        // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
+        // |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
+        // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
+        // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
+
+        bindings = <
+        &none       &none       &none       &none       &none                                                                                                   &none      &none         &none                  &none                  &none
+        &none       &none       &none       &none       &none      &none                                                                            &none       &none      &none         &none                  &none                  &none
+        &kp EXCL    &kp COMMA   &kp DOT     &kp COLON   &kp SEMI   &kp QMARK                                                                        &none       &kp LBKT   &kp SQT       &kp DQT                &kp RBKT               &none
+        &kp HASH    &kp CARET   &kp EQUAL   &kp UNDER   &kp DLLR   &kp ASTRK                                                                        &kp GRAVE   &kp LPAR   &kp LBRC      &kp RBRC               &kp RPAR               &none
+        &kp TILDE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp TAB     &kp DOT     &kp ASTRK   &tog SYMBOLS   &none   &none     &none       &kp BSPC   &none         &none                  &none                  &none
+        &kp PRCNT   &kp AMPS    &kp AT      &kp BSLH    &kp PLUS               &kp SPACE   &kp ENTER   &kp SEMI    &none          &none   &none                 &kp DEL    &kp LS(TAB)   &kp RING1_FINGER_MOD   &kp PINKY_FINGER_MOD   &none
+        >;
+    };
+
 
     function_layer {
         // ---------------------------------------------------------------------------------------------------------------------------------
