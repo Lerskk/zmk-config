@@ -27,8 +27,12 @@
 
     combos {
         compatible = "zmk,combos";
-
-        COMBO(cb_save,          54,  &kp K,           DEFAULT)
+        combo_esc {
+          timeout-ms = <50>;
+          key-positions = <0 1>;
+          bindings = <&kp ESC>;
+        };
+        // COMBO(cb_save,          54,  &kp K,           DEFAULT)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
