@@ -28,7 +28,7 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cb_save,          LHR LHM L0,  &kp K,           DEFAULT)
+        COMBO(cb_save,          54,  &kp K,           DEFAULT)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
