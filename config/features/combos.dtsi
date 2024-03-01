@@ -15,6 +15,9 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
+    #define L2  52  // left thumb keys
+    #define R2  57
+
     #define COMBO_TERM 50
 
     #define COMBO(NAME, KEYS, BINDINGS, DEFAULT) \
