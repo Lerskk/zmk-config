@@ -64,6 +64,6 @@
 
     combo_must_tap {
 
-        COMBO_MUST_TAP(ht_w     , &kp LCTL  &kp LGUI                   , &kp W)
+        // COMBO_MUST_TAP(ht_w     , &kp LCTL  &kp LGUI                   , &kp W)
     };
 };
