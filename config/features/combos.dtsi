@@ -15,9 +15,6 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 / {
-    #define L2  52  // left thumb keys
-    #define R2  57
-
     #define COMBO_TERM 50
 
     #define COMBO(NAME, KEYS, BINDINGS, DEFAULT) \
@@ -30,13 +27,12 @@
 
     combos {
         compatible = "zmk,combos";
-        // combo_esc {
-        //   timeout-ms = <50>;
-        //   key-positions = <R2 L2>;
-        //   layers = <0>;
-        //   bindings = <&kp K>;
-        // };
-        COMBO(cb_save,         R2 L2,  &kp K,           0)
+        combo_esc {
+          timeout-ms = <50>;
+          key-positions = <R2 L2>;
+          layers = <0>;
+          bindings = <&kp K>;
+        };
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
