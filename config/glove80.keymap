@@ -35,6 +35,49 @@
 
 / {
   behaviors {
+    #define LTP 23   // left-top row
+    #define LTR 24
+    #define LTM 25
+    #define LTI 26
+    #define LTC 27  
+    
+    #define RTC 28   // right-top row
+    #define RTI 29
+    #define RTM 30
+    #define RTR 31
+    #define RTP 32
+    
+    #define LHP 35  // left-middle row
+    #define LHR 36
+    #define LHM 37
+    #define LHI 38
+    #define LHC 39
+    
+    #define RHC 40  // right-middle row
+    #define RHI 41
+    #define RHM 42
+    #define RHR 43
+    #define RHP 44
+    
+    #define LBP 47  // left-bottom row
+    #define LBR 48
+    #define LBM 49
+    #define LBI 50
+    #define LBC 51
+    
+    #define RBC 58  // right-bottom row
+    #define RBI 59
+    #define RBM 60
+    #define RBR 61
+    #define RBP 62
+    
+    #define L2  52  // left thumb keys
+    #define L1  70
+    #define L0  69
+    
+    #define R0  74  // right thumb keys
+    #define R1  73
+    #define R2  57
 
     #ifndef PINKY_FINGER_MOD
     #define PINKY_FINGER_MOD LGUI
