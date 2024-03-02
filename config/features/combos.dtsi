@@ -33,7 +33,7 @@
           layers = <0>;
           bindings = <&kp K>;
         };
-        COMBO(cb_enter_l, LHM LHR LHI, &ht_enter, DEFAULT)
+        COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
