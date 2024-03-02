@@ -64,6 +64,6 @@
         };
 
     combo_must_tap {
-      // COMBO_MUST_TAP(ht_enter , &kp LSHFT &kp LCTL &kp LALT          , &kp ENTER)
+      COMBO_MUST_TAP(ht_enter , &kp LSHFT &kp LCTL &kp LGUI          , &kp ENTER)
     };
 };
