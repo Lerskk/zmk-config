@@ -15,6 +15,11 @@
 #endif
 
 
+#define TAPPING_TERM 175
+#define TD_TAPPING_TERM 225
+#define QUICK_TAP_TERM 175
+#define ADAPTIVE_KEY_TIMEOUT 300
+
 #define LTP 23   // left-top row
 #define LTR 24
 #define LTM 25
