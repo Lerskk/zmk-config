@@ -33,7 +33,7 @@
           layers = <0>;
           bindings = <&kp K>;
         };
-        COMBO(cb_save,L2 R2,&kp K,DEFAULT)
+        // COMBO(cb_save, R2,&kp K,DEFAULT)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \

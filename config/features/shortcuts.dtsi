@@ -1,0 +1,15 @@
+/ {
+    #define SHORTCUT(NAME, BINDINGS) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            wait-ms = <10>; \
+            tap-ms = <10>; \
+            bindings = <BINDINGS>; \
+        };
+    
+
+    shortcuts {
+        SHORTCUT(mc_fullscr,                &macro_tap &kp LC(LG(F)))
+    };
+};

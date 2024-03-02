@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #include "./config.dtsi"
+#include "./features/shortcuts.dtsi"
 #include "./features/combos.dtsi"
 
 #include <dt-bindings/zmk/bt.h>
