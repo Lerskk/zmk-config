@@ -27,13 +27,12 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-          timeout-ms = <50>;
-          key-positions = <R2 L2>;
-          layers = <0>;
-          bindings = <&kp K>;
+        cb_save { 
+            timeout-ms = <COMBO_TERM>; 
+            layers = <DEFAULT>; 
+            key-positions = <R2>; 
+            bindings = <&mc_fullscr>; 
         };
-        COMBO(cb_save, R2,&mc_fullscr,DEFAULT)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
