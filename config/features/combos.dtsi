@@ -17,7 +17,7 @@
 / {
     #define COMBO_TERM 50
 
-    #define COMBO(NAME, KEYS, BINDINGS, DEFAULT) \
+    #define COMBO(NAME, KEYS, BINDINGS, LAYERS) \
         NAME { \
             timeout-ms = <COMBO_TERM>; \
             layers = <LAYERS>; \
@@ -27,12 +27,13 @@
 
     combos {
         compatible = "zmk,combos";
-        cb_save { 
-            timeout-ms = <COMBO_TERM>; 
-            layers = <DEFAULT>; 
-            key-positions = <R2>; 
-            bindings = <&mc_fullscr>; 
+        combo_esc {
+          timeout-ms = <50>;
+          key-positions = <R2 L2>;
+          layers = <0>;
+          bindings = <&kp K>;
         };
+        COMBO(cb_save, R2,&kp K,DEFAULT)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
