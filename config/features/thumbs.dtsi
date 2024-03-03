@@ -71,7 +71,6 @@
         // ******************** SMART SHIFT / MAGIC KEY ******************** //
 
         SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &shift_caps_word)
-        SMART_MAGIC(smart_a_magic, "smart_a_magic", &kp A)
 
         ht_magic: ht_magic {
             compatible = "zmk,behavior-hold-tap";
@@ -79,7 +78,7 @@
             tapping-term-ms = <TAPPING_TERM>;
             flavor = "tap-preferred";
             quick-tap-ms = <QUICK_TAP_TERM>;
-            bindings = <&mo>, <&smart_a_magic>;
+            bindings = <&mo>, <&smart_shift_magic>;
         };
     };
 };
