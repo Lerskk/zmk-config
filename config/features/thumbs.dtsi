@@ -40,7 +40,7 @@
       tapping-term-ms = <TAPPING_TERM>;
       flavor = "tap-preferred";
       quick-tap-ms = <QUICK_TAP_TERM>;
-      bindings = <&mo>, <&kp A>;
+      bindings = <&mo>, <&smart_shift_magic>;
     };
 
   };
