@@ -13,7 +13,7 @@
       #binding-cells = <0>; \
       max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
       defaults = <DEFAULT>; \
-      antecedents = <A>; \
+      antecedents = <&kp A>; \
       bindings =    <&kp O>; \
   };
 
