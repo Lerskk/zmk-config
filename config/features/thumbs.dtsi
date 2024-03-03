@@ -13,8 +13,9 @@
       #binding-cells = <0>; \
       max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
       defaults = <DEFAULT>; \
-      antecedents = <&kp A>; \
-      bindings =    <&kp O>; \
+      bindings = <&kp U>, <&kp O>; \
+                 antecedents = <Q Z>; \
+                 max-delay-ms = <250>; \
   };
 
   custom_caps_word: custom_caps_word {
