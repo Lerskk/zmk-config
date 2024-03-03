@@ -6,15 +6,15 @@
 */
 
 / {
-  #define SMART_MAGIC(NAME, LABEL, DEFAULT) \
+  #define SMART_MAGIC(NAME, LABEL) \
     NAME: NAME { \
       compatible = "zmk,behavior-antecedent-morph"; \
       label = LABEL; \
       #binding-cells = <0>; \
       max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-      defaults = <DEFAULT>; \
+      defaults = <&kp A>; \
+      antecedents = <Q Z>; \
       bindings = <&kp U>, <&kp O>; \
-                 antecedents = <Q Z>; \
   };
 
   custom_caps_word: custom_caps_word {
@@ -31,7 +31,7 @@
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-  SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &kp A)
+  SMART_MAGIC(smart_shift_magic, "smart_shift_magic")
 
   ht_magic: ht_magic {
     compatible = "zmk,behavior-hold-tap";
