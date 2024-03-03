@@ -6,42 +6,70 @@
 */
 
 / {
-  #define SMART_MAGIC(NAME) \
-    NAME: NAME { \
-      compatible = "zmk,behavior-antecedent-morph"; \
-      #binding-cells = <0>; \
-      max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-      defaults = <&kp A>; \
-      antecedents = <Q Z>; \
-      bindings = <&kp U>, <&kp O>; \
-  };
+    #define SMART_REPEAT(NAME, LABEL, DEFAULT) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-antecedent-morph"; \
+            label = LABEL; \
+            #binding-cells = <0>; \
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+            defaults = <DEFAULT>; \
+            antecedents = <A>; \
+            bindings =    <&kp V>; \
+        };
 
-  thumbs {
+    #define SMART_MAGIC(NAME, LABEL, DEFAULT) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-antecedent-morph"; \
+            label = LABEL; \
+            #binding-cells = <0>; \
+            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+            defaults = <DEFAULT>; \
+            antecedents = <A>; \
+            bindings =    <&kp V>; \
+        };
 
-    custom_caps_word: custom_caps_word {
-          compatible = "zmk,behavior-caps-word";
-          #binding-cells = <0>;  
-          continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE >;
+    thumbs {
+        
+        // ******************* SMART SHIFT / CAPS WORD ******************* //
+
+        custom_caps_word: custom_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            #binding-cells = <0>;  
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE >;
+        };
+
+        shift_caps_word: shift_caps_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "shift_caps_word";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&custom_caps_word>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ******************** SMART SHIFT / REPEAT KEY ******************** //
+
+        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &shift_caps_word)
+
+        ht_repeat: ht_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&smart_shift_repeat>;
+        };
+
+        // ******************** SMART SHIFT / MAGIC KEY ******************** //
+
+        SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &shift_caps_word)
+
+        ht_magic: ht_magic {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&smart_shift_magic>;
+        };
     };
-
-    shift_caps_word: shift_caps_word {
-      compatible = "zmk,behavior-mod-morph";
-      label = "shift_caps_word";
-      #binding-cells = <0>;
-      bindings = <&sk LSHFT>, <&custom_caps_word>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    SMART_MAGIC(smart_shift_magic)
-
-    ht_magic: ht_magic {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      tapping-term-ms = <TAPPING_TERM>;
-      flavor = "tap-preferred";
-      quick-tap-ms = <QUICK_TAP_TERM>;
-      bindings = <&mo>, <&smart_shift_magic>;
-    };
-
-  };
 };
