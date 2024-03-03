@@ -48,7 +48,7 @@
 
         // ******************** SMART SHIFT / REPEAT KEY ******************** //
 
-        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &shift_caps_word)
+        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &key_repeat)
 
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
