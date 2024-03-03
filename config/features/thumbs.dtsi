@@ -15,7 +15,6 @@
       defaults = <DEFAULT>; \
       bindings = <&kp U>, <&kp O>; \
                  antecedents = <Q Z>; \
-                 max-delay-ms = <250>; \
   };
 
   custom_caps_word: custom_caps_word {
@@ -32,7 +31,7 @@
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 
-  SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &shift_caps_word)
+  SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &kp A)
 
   ht_magic: ht_magic {
     compatible = "zmk,behavior-hold-tap";
