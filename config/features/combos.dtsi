@@ -34,6 +34,8 @@
           bindings = <&kp K>;
         };
         COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT)
+        COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT)
+        COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
