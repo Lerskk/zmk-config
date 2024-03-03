@@ -29,6 +29,15 @@
         };
 
     thumbs {
+
+        ltn: layer-tap-no-quick-tap {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          tapping-term-ms = <TAPPING_TERM>;
+          flavor = "tap-preferred";
+          quick-tap-ms = <0>;
+          bindings = <&mo>, <&kp>;
+        };
         
         // ******************* SMART SHIFT / CAPS WORD ******************* //
 
