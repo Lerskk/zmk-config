@@ -44,5 +44,5 @@
       bindings = <&mo>, <&smart_shift_magic>;
     };
 
-  }
+  };
 };
