@@ -77,7 +77,7 @@
         ignore-alphas;
         ignore-modifiers;
         #binding-cells = <0>;  
-        layers = <CASE_A1>;
+        layers = <SYMBOLS>;
         continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE >;
   };
 
