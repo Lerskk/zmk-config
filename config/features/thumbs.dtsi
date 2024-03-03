@@ -6,7 +6,6 @@
 */
 
 / {
-
   #define SMART_MAGIC(NAME, LABEL, DEFAULT) \
     NAME: NAME { \
       compatible = "zmk,behavior-antecedent-morph"; \
@@ -45,4 +44,4 @@
     quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&mo>, <&smart_shift_magic>;
   };
-}
+};
