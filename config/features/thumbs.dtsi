@@ -19,10 +19,7 @@
 
   custom_caps_word: custom_caps_word {
         compatible = "zmk,behavior-caps-word";
-        ignore-alphas;
-        ignore-modifiers;
         #binding-cells = <0>;  
-        layers = <SYMBOLS>;
         continue-list = <UNDERSCORE MINUS BACKSPACE DELETE SQT TILDE CARET GRAVE >;
   };
 
