@@ -13,8 +13,18 @@
             #binding-cells = <0>; \
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
             defaults = <DEFAULT>; \
-            antecedents = <A>; \
-            bindings =    <&kp V>; \
+            antecedents = < \
+                           A           B           C           D           E           F           G           H          \
+                           I           J           K           L           M           N           O           P          \
+                           Q           R           S           T           U           V           W           X          \
+                           Y           Z \
+                           >; \
+            bindings =    < \
+                           &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
+                           &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
+                           &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
+                           &key_repeat &key_repeat \
+                           >; \
         };
 
     #define SMART_MAGIC(NAME, LABEL, DEFAULT) \
@@ -24,8 +34,12 @@
             #binding-cells = <0>; \
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
             defaults = <DEFAULT>; \
-            antecedents = <A>; \
-            bindings =    <&kp V>; \
+            antecedents = < \
+                           A     E      H     O     P     R     U     Y     \
+                           >; \
+            bindings =    < \
+                           &kp O &kp U  &kp Y &kp A &kp Y &kp L &kp E &kp P \
+                           >; \
         };
 
     thumbs {
@@ -57,7 +71,7 @@
 
         // ******************** SMART SHIFT / REPEAT KEY ******************** //
 
-        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &key_repeat)
+        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &shift_caps_word)
 
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
