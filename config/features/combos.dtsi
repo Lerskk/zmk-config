@@ -25,15 +25,18 @@
             bindings = <BINDINGS>; \
         };
 
+    #define SMALL_COMBO(NAME, KEYS, BINDINGS, LAYERS) \
+        NAME { \
+            timeout-ms = <40>; \
+            layers = <LAYERS>; \
+            key-positions = <KEYS>; \
+            bindings = <BINDINGS>; \
+        };
+
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-          timeout-ms = <50>;
-          key-positions = <R2 L2>;
-          layers = <0>;
-          bindings = <&kp K>;
-        };
-        COMBO(cb_escc, LTM LTR, &kp ESC, DEFAULT SYMBOLS NUMBER)
+
+        SMALL_COMBO(cb_escc, LTM LTR, &kp ESC, DEFAULT SYMBOLS NUMBER)
         COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT SYMBOLS NUMBER)
         COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT SYMBOLS NUMBER)
         COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT SYMBOLS NUMBER)
