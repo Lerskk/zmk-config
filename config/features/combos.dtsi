@@ -27,7 +27,7 @@
 
     #define SMALL_COMBO(NAME, KEYS, BINDINGS, LAYERS) \
         NAME { \
-            timeout-ms = <40>; \
+            timeout-ms = <30>; \
             layers = <LAYERS>; \
             key-positions = <KEYS>; \
             bindings = <BINDINGS>; \
@@ -37,6 +37,7 @@
         compatible = "zmk,combos";
 
         SMALL_COMBO(cb_escc, LTM LTR, &kp ESC, DEFAULT SYMBOLS NUMBER)
+
         COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT SYMBOLS NUMBER)
         COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT SYMBOLS NUMBER)
         COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT SYMBOLS NUMBER)
