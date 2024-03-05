@@ -33,9 +33,10 @@
           layers = <0>;
           bindings = <&kp K>;
         };
-        COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT)
-        COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT)
-        COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT)
+        COMBO(cb_escc, LTM LTR, &kp ESC, DEFAULT SYMBOLS NUMBER)
+        COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT SYMBOLS NUMBER)
+        COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT SYMBOLS NUMBER)
+        COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT SYMBOLS NUMBER)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \
