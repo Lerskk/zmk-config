@@ -27,7 +27,7 @@
 
     #define SMALL_COMBO(NAME, KEYS, BINDINGS, LAYERS) \
         NAME { \
-            timeout-ms = <30>; \
+            timeout-ms = <20>; \
             layers = <LAYERS>; \
             key-positions = <KEYS>; \
             bindings = <BINDINGS>; \
