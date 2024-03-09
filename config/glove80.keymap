@@ -89,17 +89,17 @@
       mods = <(MOD_LSFT)>;
     };
 
-    #define LeftPinky(key) left_pinky PINKY_FINGER_MOD key
-    #define LeftRing1(key) left_pinky RING1_FINGER_MOD key
-    #define LeftRing2(key) left_pinky RING2_FINGER_MOD key
-    #define LeftMiddy(key) left_pinky MIDDY_FINGER_MOD key
-    #define LeftIndex(key) left_pinky INDEX_FINGER_MOD key
+    #define lp(key) left_pinky PINKY_FINGER_MOD key
+    #define lr1(key) left_pinky RING1_FINGER_MOD key
+    #define lr2(key) left_pinky RING2_FINGER_MOD key
+    #define lm(key) left_pinky MIDDY_FINGER_MOD key
+    #define li(key) left_pinky INDEX_FINGER_MOD key
 
-    #define RightPinky(key) left_pinky PINKY_FINGER_MOD key
-    #define RightRing1(key) left_pinky RING1_FINGER_MOD key
-    #define RightRing2(key) left_pinky RING2_FINGER_MOD key
-    #define RightMiddy(key) left_pinky MIDDY_FINGER_MOD key
-    #define RightIndex(key) left_pinky INDEX_FINGER_MOD key
+    #define rp(key) left_pinky PINKY_FINGER_MOD key
+    #define rr1(key) left_pinky RING1_FINGER_MOD key
+    #define rr2(key) left_pinky RING2_FINGER_MOD key
+    #define rm(key) left_pinky MIDDY_FINGER_MOD key
+    #define ri(key) left_pinky INDEX_FINGER_MOD key
 
     lower: lower {
       compatible = "zmk,behavior-tap-dance";
@@ -248,8 +248,8 @@
         bindings = <
         &kp F1      &kp F2             &kp F3          &kp F4          &kp F5                                                                                                                           &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
-        &cappy CAPSLOCK 0     &kp B              &LeftRing2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &RightRing1(U)  &kp J       &kp SEMI
-        &kp TAB     &LeftPinky(N)      &LeftRing1(R)   &LeftMiddy(T)   &LeftIndex(S)   &kp G                                                                                                  &kp Y     &RightIndex(H)   &RightMiddy(A)   &RightRing1(E)  &RightPinky(I)       &kp ENTER
+        &cappy CAPSLOCK 0     &kp B              &lr2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
+        &kp TAB     &lp(N)      &lr1(R)   &lm(T)   &li(S)   &kp G                                                                                                  &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
         &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION DEL    &kp DOWN   &ltn SYMBOLS A   &ht_magic SYMBOLS 0    &kp LEFT                   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
         &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE   &ht_repeat CURSOR 0   &lower   &lower   &ht_magic SYMBOLS 0   &thumb SYMBOLS BACKSPACE       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
@@ -303,12 +303,12 @@
         // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
         bindings = <
-        &none       &none                  &none                  &none                  &none                                                                                                          &none      &none      &none       &none       &none
-        &none       &none                  &kp D                  &kp E                  &kp F                  &none                                                                       &kp CARET   &kp HASH   &kp DLLR   &kp TILDE   &kp EXCL    &kp PIPE
-        &none       &kp X                  &kp A                  &kp B                  &kp C                  &kp Y                                                                       &kp PRCNT   &kp N7     &kp N8     &kp N9      &kp COLON   &kp K
-        &none       &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp UNDER                                                                   &kp PLUS    &kp N4     &kp N5     &kp N6      &kp MINUS   &kp J
-        &none       &kp ENTER              &kp SPACE              &kp TAB                &kp BSPC               &kp TAB     &none   &none   &none         &kp LT      &kp GT    &kp EQUAL   &kp ASTRK   &kp N1     &kp N2     &kp N3      &kp FSLH    &kp LS(G)
-        &none       &none                  &none                  &kp LS(TAB)            &kp DEL                            &none   &none   &tog NUMBER   &kp COMMA   &kp DOT   &kp N0                  &trans     &trans     &trans      &trans      &kp AT
+        &none   &none       &none       &none         &none                                                                                                     &none       &none      &none       &none       &none
+        &none   &none       &none       &none         &none       &none                                                                             &none       &none       &none      &none       &none       &none
+        &none   &kp AT      &kp A       &kp DLLR      &kp C       &kp PRCNT                                                                         &kp COLON   &kp MINUS   &kp PLUS   &kp FSLH    &kp ASTRK   &none
+        &none   &lp(N6)     &lr1(N3)    &lm(N1)       &li(N2)     &kp N7                                                                            &kp N9      &ri(N4)     &rm(N0)    &rr1(N5)    &rp(N8)     &none
+        &none   &kp LT      &kp GT      &kp EQUAL     &kp TILDE   &kp TAB     &none   &none   &none         &kp LT      &kp GT      &kp EQUAL       &none       &none       &kp DOT    &kp COMMA   &none       &none
+        &none   &none       &none       &none         &none                   &none   &none   &tog NUMBER   &kp COMMA   &kp SPACE   &kp BACKSPACE               &trans      &trans     &trans      &trans      &none
         >;
     };
 
@@ -322,12 +322,12 @@
         // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
         bindings = <
-        &none       &none       &none       &none       &none                                                                                                   &none                  &none                  &none                  &none                  &none
-        &none       &kp SQT     &kp LPAR    &kp RPAR    &kp SEMI   &kp COMMA                                                                          &none     &none                  &none                  &none                  &none                  &none
-        &kp EXCL    &kp LBRC    &kp GRAVE   &kp DQT     &kp RBRC   &kp QMARK                                                                          &kp SQT   &none                  &none                  &none                  &none                  &none
-        &kp HASH    &kp CARET   &kp EQUAL   &kp UNDER   &kp DLLR   &kp ASTRK                                                                          &none     &kp INDEX_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp PINKY_FINGER_MOD               &none
-        &kp TILDE   &kp LT      &kp PIPE    &kp MINUS   &kp GT     &kp FSLH    &kp BSLH    &kp DOT     &kp ASTRK   &none          &none   &none       &none     &kp BSPC               &kp TAB                &kp SPACE              &kp ENTER              &none
-        &kp AT      &kp AMPS    &kp LBKT    &kp RBKT    &kp PLUS               &kp COLON   &kp PRCNT   &kp SEMI    &tog SYMBOLS   &none   &kp SPACE             &kp DEL                &kp LS(TAB)            &none                  &none                  &none
+        &none   &none      &none         &none        &none                                                                                                  &none       &none       &none        &none       &none
+        &none   &none      &none         &none        &none       &none                                                                          &none       &none       &none       &none        &none       &none
+        &none   &kp HASH   &kp CARET     &kp DQT      &kp ASTRK   &kp SEMI                                                                       &kp COLON   &kp GRAVE   &kp LBKT    &kp RBKT     &kp PRCNT   &none
+        &none   &lp(LT)    &lr1(UNDER)   &lm(EQUAL)   &li(GT)     &kp COMMA                                                                      &kp DOT     &ri(LPAR)   &rm(LBRC)   &rr1(RBRC)   &rp(RPAR)   &none
+        &none   &kp AT     &kp PIPE      &kp BSLH     &kp TILDE   &kp AMPS    &none       &none           &none   &none          &none   &none   &kp PIPE    &kp EXCL    &kp TAB     &kp SPACE    &kp QMARK   &none
+        &none   &none      &none         &none        &none                   &kp SPACE   &kp BACKSPACE   &none   &tog SYMBOLS   &none   &none               &none       &none       &none        &none       &none
         >;
     };
 

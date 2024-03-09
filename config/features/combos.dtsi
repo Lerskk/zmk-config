@@ -38,6 +38,10 @@
 
         SMALL_COMBO(cb_escc, LTM LTR, &kp ESC, DEFAULT SYMBOLS NUMBER)
 
+        SMALL_COMBO(cb_k, RHI RHM, &kp K, SYMBOLS NUMBER)
+        SMALL_COMBO(cb_j, RHM RHR, &kp J, SYMBOLS NUMBER)
+        COMBO(cb_g, RBI RBR RBM, &kp LS(G), SYMBOLS NUMBER)
+
         COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT SYMBOLS NUMBER)
         COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT SYMBOLS NUMBER)
         COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT SYMBOLS NUMBER)
