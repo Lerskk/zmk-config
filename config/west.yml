@@ -13,7 +13,7 @@ manifest:
   projects:
     - name: zmk
       remote: klausweiss 
-      revision: fix/adaptive-keys
+      revision: main
       import: app/west.yml
   self:
     path: config
