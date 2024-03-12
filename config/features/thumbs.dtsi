@@ -71,7 +71,7 @@
 
         // ******************** SMART SHIFT / REPEAT KEY ******************** //
 
-        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &shift_caps_word)
+        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &key_repeat)
 
         ht_repeat: ht_repeat {
             compatible = "zmk,behavior-hold-tap";
@@ -84,7 +84,7 @@
 
         // ******************** SMART SHIFT / MAGIC KEY ******************** //
 
-        SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &shift_caps_word)
+        SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &key_repeat)
 
         ht_magic: ht_magic {
             compatible = "zmk,behavior-hold-tap";
