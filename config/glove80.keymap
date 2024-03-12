@@ -70,16 +70,7 @@
     #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
     #endif
 
-    #define AS(keycode) &as LS(keycode) keycode
-    as: auto_shift {
-                compatible = "zmk,behavior-hold-tap";
-                label = "AUTO_SHIFT";
-                #binding-cells = <2>;
-                tapping_term_ms = <135>;
-                quick_tap_ms = <0>;
-                flavor = "tap-preferred";
-                bindings = <&kp>, <&kp>;
-            };
+
     left_pinky: homey_left_pinky {
       compatible = "zmk,behavior-hold-tap";
       flavor = HOMEY_HOLDING_TYPE;
@@ -109,7 +100,7 @@
     #define rr1(key) left_pinky RING1_FINGER_MOD key
     #define rr2(key) left_pinky RING2_FINGER_MOD key
     #define rm(key) left_pinky MIDDY_FINGER_MOD key
-    #define ri(key) left_pinky INDEX_FINGER_MOD AS(key)
+    #define ri(key) left_pinky INDEX_FINGER_MOD key
 
     lower: lower {
       compatible = "zmk,behavior-tap-dance";
