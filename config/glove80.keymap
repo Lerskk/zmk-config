@@ -85,14 +85,13 @@
    \
       hrt##letter: hrt##letter { \
           compatible = "zmk,behavior-tap-dance"; \
-          label = ZMK_MACRO_STRINGIFY(hrt##letter); \
           #binding-cells = <0>; \
           tapping-term-ms = <tapping_time>; \
           bindings = <&hras##letter mod letter>, <&kp letter>; \
           trigger-each-binding; \
       };
 
-    HRM(A, LSHIFT, 300)
+    HRM(A, LSHIFT, TAPPING_TERM_PINKY)
 
     #define HRA &hrasA LGUI A
 
