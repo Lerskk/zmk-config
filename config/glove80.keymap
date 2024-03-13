@@ -73,7 +73,6 @@
     #define HRM(letter, mod, tapping_time) \
       hras##letter: hras##letter { \
           compatible = "zmk,behavior-hold-tap"; \
-          label = ZMK_MACRO_STRINGIFY(HOME_ROW_AS_##letter); \
           #binding-cells = <2>; \
           flavor = "balanced"; \
           tapping-term-ms = <tapping_time>; \
