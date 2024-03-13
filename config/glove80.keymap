@@ -91,7 +91,7 @@
           trigger-each-binding; \
       };
 
-    HRM(A, LSHIFT, TAPPING_TERM_PINKY)
+    HRM(A, LSHIFT, 200)
 
     #define HRA &hrasA LGUI A
 
