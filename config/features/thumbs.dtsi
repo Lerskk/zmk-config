@@ -27,19 +27,19 @@
         //                    >; \
         // };
 
-    #define SMART_MAGIC(NAME, DEFAULT) \
-      NAME: NAME { \
-        compatible = "zmk,behavior-antecedent-morph"; \
-        #binding-cells = <0>; \
-        max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-        defaults = <DEFAULT>; \
-        antecedents = < \
-                       A     C      E      F     G     H     O     P     R     S     T     U     W     Y     \
-                       >; \
-        bindings =    < \
-                       &kp O &kp S  &kp U  &kp Y &kp S &kp Y &kp A &kp H &kp L &kp C &kp M &kp E &kp S &kp P \
-                       >; \
-    };
+    // #define SMART_MAGIC(NAME, DEFAULT) \
+    //   NAME: NAME { \
+    //     compatible = "zmk,behavior-antecedent-morph"; \
+    //     #binding-cells = <0>; \
+    //     max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+    //     defaults = <DEFAULT>; \
+    //     antecedents = < \
+    //                    A     C      E      F     G     H     O     P     R     S     T     U     W     Y     \
+    //                    >; \
+    //     bindings =    < \
+    //                    &kp O &kp S  &kp U  &kp Y &kp S &kp Y &kp A &kp H &kp L &kp C &kp M &kp E &kp S &kp P \
+    //                    >; \
+    // };
 
     thumbs {
 
