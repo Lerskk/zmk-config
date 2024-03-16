@@ -84,13 +84,13 @@
 
         SMART_MAGIC(smart_shift_magic, &key_repeat)
 
-        // ht_magic: ht_magic {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <TAPPING_TERM>;
-        //     flavor = "tap-preferred";
-        //     quick-tap-ms = <QUICK_TAP_TERM>;
-        //     bindings = <&mo>, <&smart_shift_magic>;
-        // };
+        ht_magic: ht_magic {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <QUICK_TAP_TERM>;
+            bindings = <&mo>, <&smart_shift_magic>;
+        };
     };
 };
