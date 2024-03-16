@@ -6,31 +6,30 @@
 */
 
 / {
-    #define SMART_REPEAT(NAME, LABEL, DEFAULT) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-antecedent-morph"; \
-            label = LABEL; \
-            #binding-cells = <0>; \
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-            defaults = <DEFAULT>; \
-            antecedents = < \
-                           A           B           C           D           E           F           G           H          \
-                           I           J           K           L           M           N           O           P          \
-                           Q           R           S           T           U           V           W           X          \
-                           Y           Z \
-                           >; \
-            bindings =    < \
-                           &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
-                           &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
-                           &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
-                           &key_repeat &key_repeat \
-                           >; \
-        };
+    // #define SMART_REPEAT(NAME, LABEL, DEFAULT) \
+        // NAME: NAME { \
+        //     compatible = "zmk,behavior-antecedent-morph"; \
+        //     label = LABEL; \
+        //     #binding-cells = <0>; \
+        //     max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+        //     defaults = <DEFAULT>; \
+        //     antecedents = < \
+        //                    A           B           C           D           E           F           G           H          \
+        //                    I           J           K           L           M           N           O           P          \
+        //                    Q           R           S           T           U           V           W           X          \
+        //                    Y           Z \
+        //                    >; \
+        //     bindings =    < \
+        //                    &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
+        //                    &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
+        //                    &kp V       &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat &key_repeat\
+        //                    &key_repeat &key_repeat \
+        //                    >; \
+        // };
 
-    #define SMART_MAGIC(NAME, LABEL, DEFAULT) \
+    #define SMART_MAGIC(NAME, DEFAULT) \
         NAME: NAME { \
             compatible = "zmk,behavior-antecedent-morph"; \
-            label = LABEL; \
             #binding-cells = <0>; \
             max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
             defaults = <DEFAULT>; \
@@ -63,7 +62,6 @@
 
         shift_caps_word: shift_caps_word {
             compatible = "zmk,behavior-mod-morph";
-            label = "shift_caps_word";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&custom_caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -71,28 +69,28 @@
 
         // ******************** SMART SHIFT / REPEAT KEY ******************** //
 
-        SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &key_repeat)
-
-        ht_repeat: ht_repeat {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
-            bindings = <&mo>, <&smart_shift_repeat>;
-        };
+        // SMART_REPEAT(smart_shift_repeat, "smart_shift_repeat", &key_repeat)
+        //
+        // ht_repeat: ht_repeat {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <TAPPING_TERM>;
+        //     flavor = "tap-preferred";
+        //     quick-tap-ms = <QUICK_TAP_TERM>;
+        //     bindings = <&mo>, <&smart_shift_repeat>;
+        // };
 
         // ******************** SMART SHIFT / MAGIC KEY ******************** //
 
-        SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &key_repeat)
+        SMART_MAGIC(smart_shift_magic, &key_repeat)
 
-        ht_magic: ht_magic {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
-            bindings = <&mo>, <&smart_shift_magic>;
-        };
+        // ht_magic: ht_magic {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <TAPPING_TERM>;
+        //     flavor = "tap-preferred";
+        //     quick-tap-ms = <QUICK_TAP_TERM>;
+        //     bindings = <&mo>, <&smart_shift_magic>;
+        // };
     };
 };
