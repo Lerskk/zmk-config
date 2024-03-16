@@ -13,7 +13,7 @@ manifest:
   projects:
     - name: zmk
       remote: lerskk 
-      revision: dev
+      revision: test/adaptative-key
       import: app/west.yml
   self:
     path: config

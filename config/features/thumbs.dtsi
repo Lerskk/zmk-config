@@ -28,18 +28,18 @@
         // };
 
     #define SMART_MAGIC(NAME, DEFAULT) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-antecedent-morph"; \
-            #binding-cells = <0>; \
-            max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-            defaults = <DEFAULT>; \
-            antecedents = < \
-                           A     C      E      F     G     H     O     P     R     S     T     U     W     Y     \
-                           >; \
-            bindings =    < \
-                           &kp O &kp S  &kp U  &kp Y &kp S &kp Y &kp A &kp H &kp L &kp C &kp M &kp E &kp S &kp P \
-                           >; \
-        };
+      NAME: NAME { \
+        compatible = "zmk,behavior-antecedent-morph"; \
+        #binding-cells = <0>; \
+        max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+        defaults = <DEFAULT>; \
+        antecedents = < \
+                       A     C      E      F     G     H     O     P     R     S     T     U     W     Y     \
+                       >; \
+        bindings =    < \
+                       &kp O &kp S  &kp U  &kp Y &kp S &kp Y &kp A &kp H &kp L &kp C &kp M &kp E &kp S &kp P \
+                       >; \
+    };
 
     thumbs {
 
@@ -82,15 +82,23 @@
 
         // ******************** SMART SHIFT / MAGIC KEY ******************** //
 
-        SMART_MAGIC(smart_shift_magic, &key_repeat)
-
-        ht_magic: ht_magic {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <TAPPING_TERM>;
-            flavor = "tap-preferred";
-            quick-tap-ms = <QUICK_TAP_TERM>;
-            bindings = <&mo>, <&smart_shift_magic>;
-        };
+        // SMART_MAGIC(smart_shift_magic, &key_repeat)
+        // smart_shift_magic: smart_shift_magic { 
+        //   compatible = "zmk,behavior-antecedent-morph"; 
+        //   #binding-cells = <0>; 
+        //   max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; 
+        //   defaults = <&key_repeat>; 
+        //   antecedents = <A>;
+        //   bindings = < &kp O>;
+        // };
+        //
+        // ht_magic: ht_magic {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <TAPPING_TERM>;
+        //     flavor = "tap-preferred";
+        //     quick-tap-ms = <QUICK_TAP_TERM>;
+        //     bindings = <&mo>, <&smart_shift_magic>;
+        // };
     };
 };
