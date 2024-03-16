@@ -19,21 +19,12 @@
 #include "./config.dtsi"
 #include "./features/shortcuts.dtsi"
 #include "./features/combos.dtsi"
-// #include "./features/thumbs.dtsi"
+#include "./features/thumbs.dtsi"
 
 
 
 / {
   behaviors {
-    ltn: layer-tap-no-quick-tap {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      tapping-term-ms = <TAPPING_TERM>;
-      flavor = "tap-preferred";
-      quick-tap-ms = <0>;
-      bindings = <&mo>, <&kp>;
-    };
-
     #ifndef PINKY_FINGER_MOD
     #define PINKY_FINGER_MOD LGUI
     #endif
@@ -202,15 +193,6 @@
       quick-tap-ms = <300>; // enable repeat
       #binding-cells = <2>;
       bindings = <&mo>, <&space>;
-    };
-
-    smart_shift_magic: smart_shift_magic { 
-      compatible = "zmk,behavior-antecedent-morph"; 
-      #binding-cells = <0>; 
-      max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; 
-      defaults = <&key_repeat>; 
-      antecedents = <A>;
-      bindings = < &kp O>;
     };
 
     #define spc_thum(layer) thumb_space layer 0
