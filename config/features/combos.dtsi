@@ -27,7 +27,7 @@
 
     #define SMALL_COMBO(NAME, KEYS, BINDINGS, LAYERS) \
         NAME { \
-            timeout-ms = <15>; \
+            timeout-ms = <20>; \
             layers = <LAYERS>; \
             key-positions = <KEYS>; \
             bindings = <BINDINGS>; \
@@ -40,11 +40,14 @@
 
         SMALL_COMBO(cb_k, RHI RHM, &kp K, SYMBOLS NUMBER)
         SMALL_COMBO(cb_j, RHM RHR, &kp J, SYMBOLS NUMBER)
-        COMBO(cb_g, RBI RBR RBM, &kp LS(G), SYMBOLS NUMBER)
+        COMBO(cb_g, RHI RHR RHM, &kp LS(G), SYMBOLS NUMBER)
 
-        COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT SYMBOLS NUMBER)
-        COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT SYMBOLS NUMBER)
-        COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT SYMBOLS NUMBER)
+        SMALL_COMBO(cb_o_esc, RHI RHM, &mc_o_esc, MEDIA)
+        SMALL_COMBO(cb_sft_o_esc, RHM RHR, &mc_sft_o_esc, MEDIA)
+
+        COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT SYMBOLS NUMBER CURSOR)
+        COMBO(cb_tab_l, LTM LTR LTI, &kp TAB, DEFAULT SYMBOLS NUMBER CURSOR)
+        COMBO(cb_del, LBR LBM LBI, &kp DEL, DEFAULT SYMBOLS NUMBER CURSOR)
     };
 
     #define COMBO_MUST_TAP(NAME, HOLD, TAP) \

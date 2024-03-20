@@ -11,5 +11,8 @@
 
     shortcuts {
         SHORTCUT(mc_fullscr,                &macro_tap &kp LC(LG(F)))
+        
+        SHORTCUT(mc_o_esc,                  &macro_tap &kp O &kp ESC)
+        SHORTCUT(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
     };
 };

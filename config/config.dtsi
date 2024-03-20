@@ -6,9 +6,10 @@
 #define NUMBER 3
 #define SYMBOLS 4
 #define FUNCTION 5
-#define QWERTY 6
-#define LOWER 7
-#define MAGIC 8
+#define MEDIA 6
+#define QWERTY 7
+#define LOWER 8
+#define MAGIC 9
 
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
