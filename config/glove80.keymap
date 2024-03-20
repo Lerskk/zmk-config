@@ -138,15 +138,6 @@
       >;
     };
 
-    ht_magic: ht_magic {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      tapping-term-ms = <TAPPING_TERM>;
-      flavor = "tap-preferred";
-      quick-tap-ms = <QUICK_TAP_TERM>;
-      bindings = <&mo>, <&smart_shift_magic>;
-    };
-
     thumb: thumb_layer_access {
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
