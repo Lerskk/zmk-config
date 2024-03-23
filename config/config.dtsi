@@ -1,15 +1,20 @@
 
 // layers
 #define DEFAULT 0
-#define CURSOR 1
-#define MOUSE 2
-#define NUMBER 3
-#define SYMBOLS 4
-#define FUNCTION 5
-#define MEDIA 6
-#define QWERTY 7
-#define LOWER 8
-#define MAGIC 9
+#define DESONE 1
+#define DESTWO 2
+#define NUMPAD 3
+#define FNPAD 4
+#define DNAV 5
+#define CURSOR 6
+#define MOUSE 7
+#define NUMBER 8
+#define SYMBOLS 9
+#define FUNCTION 10
+#define MEDIA 11
+#define QWERTY 12
+#define LOWER 13
+#define MAGIC 14
 
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
