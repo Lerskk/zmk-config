@@ -45,7 +45,8 @@
         SMALL_COMBO(cb_o_esc, RHI RHM, &mc_o_esc, MEDIA)
         SMALL_COMBO(cb_sft_o_esc, RHM RHR, &mc_sft_o_esc, MEDIA)
 
-        COMBO(cb_design, LHM LHR LHI L0, &tog DESONE, DEFAULT SYMBOLS NUMBER CURSOR)
+        COMBO(cb_design, LHM LHR LHI L0, &to DESONE, DEFAULT)
+        COMBO(cb_base, LHM LHR LHI L0, &to DEFAULT, DESONE DESTWO)
 
         SMALL_COMBO(cb_escc, LTM LTR, &kp ESC, DEFAULT SYMBOLS NUMBER DESONE DESTWO)
         COMBO(cb_enter_l, LHM LHR LHI, &ht_enter 0 0, DEFAULT SYMBOLS NUMBER CURSOR DESONE DESTWO)

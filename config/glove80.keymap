@@ -250,7 +250,7 @@
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &cappy CAPSLOCK 0     &kp B              &lr2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
         &kp TAB     &lp(N)      &lr1(R)   &lm(T)   &li(S)   &kp G                                                                                                  &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
-        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION DEL    &skq LSHFT   &ltn SYMBOLS A   &none    &kp LEFT                   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
+        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION DEL    &skq LSHFT   &tog QWERTY   &none    &kp LEFT                   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
         &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE   &thumb CURSOR BACKSPACE   &lower   &lower   &thumb_sticky MEDIA LSHFT   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
@@ -262,7 +262,7 @@
         &none   &kp B    &kp E     &kp D   &kp V    &kp K                                                                                                      &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
         &none   &lp(A)   &lr1(R)   &lm(G)  &li(S)   &kp GRAVE                                                                                                  &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
         &none   &sp(Q)   &sr(X)    &sm(Y)  &si(Z)   &kp M       &none                &none            &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
-        &none   &none    &none     &none   &none                &dln NUMPAD DESONE   &dln DNAV DESTWO   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &none   &none    &none     &none   &none                &dln NUMPAD DESTWO   &dln DNAV DESTWO   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
@@ -279,34 +279,34 @@
 
     numpad_layer {
         bindings = <
-        &none   &none         &none       &none       &none                                                                                                                           &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
-        &none   &none         &none       &none       &none       &none                                                                                                  &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
-        &none   &kp KP_DOT    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS                                                                                           &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
-        &none   &tog FNPAD    &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
-        &none   &kp KP_N0     &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_SLASH   &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
-        &none   &none         &none       &none       &none                      &trans   &trans   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &none   &none      &none    &none    &none                                                                                                                          &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
+        &none   &none      &none    &none    &none    &none                                                                                                  &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
+        &none   &kp DOT    &kp N4   &kp N0   &kp N5   &kp MINUS                                                                                           &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
+        &none   &lp(N6)    &kp N3   &kp N1   &kp N2   &kp PLUS                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
+        &none   &sp(N5)    &kp N7   &kp N9   &kp N8   &kp FSLH    &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
+        &none   &none      &none    &none    &none                &trans   &trans   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
     fake_numpad_layer {
         bindings = <
-        &none   &none         &none    &none    &none                                                                                                                           &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
-        &none   &none         &none    &none    &none    &none                                                                                                  &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
-        &none   &kp DOT       &kp N7   &kp N8   &kp N9   &kp MINUS                                                                                           &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
-        &none   &tog FNPAD    &kp N4   &kp N5   &kp N6   &kp PLUS                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
-        &none   &kp N0        &kp N1   &kp N2   &kp N3   &kp FSLH    &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
-        &none   &none         &none    &none    &none                &trans   &trans   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &none   &none      &none    &none    &none                                                                                                                           &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
+        &none   &none      &none    &none    &none    &none                                                                                                  &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
+        &none   &kp DOT    &kp N4   &kp N0   &kp N5   &kp MINUS                                                                                           &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
+        &none   &lp(N6)    &kp N3   &kp N1   &kp N2   &kp PLUS                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
+        &none   &sp(N5)    &kp N7   &kp N9   &kp N8   &kp FSLH    &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
+        &none   &none      &none    &none    &none                &trans   &trans   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
-
+    
     design_nav_layer {
         bindings = <
-        &none   &none      &none        &none        &none                                                                                                                              &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
-        &none   &none      &none        &none        &none       &none                                                                                                  &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
-        &none   &kp DOT    &kp K_UNDO   &kp K_REDO   &kp N9      &kp MINUS                                                                                           &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
-        &none   &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT   &kp PLUS                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
-        &none   &kp N0     &kp N1       &kp N2       &kp N3      &kp FSLH    &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
-        &none   &none      &none        &none        &none                   &trans   &trans   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &none   &none           &none        &none        &none                                                                                                                              &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
+        &none   &none           &none        &none        &none       &none                                                                                                  &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
+        &none   &kp BACKSPACE   &kp UNDO   &kp REDO   &kp N9      &kp CUT                                                                                           &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
+        &none   &kp LEFT        &kp DOWN     &kp UP       &kp RIGHT   &kp COPY                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
+        &none   &kp N0          &kp N1       &kp N2       &kp N3      &kp PASTE    &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
+        &none   &none           &none        &none        &none                   &trans   &trans   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
@@ -322,7 +322,7 @@
         bindings = <
         &none       &none                  &none                  &none                  &none                                                                                                             &none      &none       &none       &none      &none
         &none       &none                  &none                  &none                  &kp DEL                &kp INS                                                                        &none       &none      &none       &none       &none      &none
-        &kp SBAR    &kp SPACE              &kp REDO               &kp UNDO               &kp BSPC               &kp CUT                                                                        &kp CUT     &none      &none       &none       &none      &none
+        &kp SBAR    &kp SPACE              &kp UNDO               &kp REDO               &kp BSPC               &kp CUT                                                                        &kp CUT     &none      &none       &none       &none      &none
         &kp SURL    &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp COPY                                                                       &kp COPY    &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT  &none
         &kp LC(T)   &kp LC(F)              &none                  &none                  &kp SALL               &kp PASTE   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none       &kp PASTE   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
         &kp LC(W)   &kp FPRE               &none                  &none                  &kp FNEX                           &none     &none   &none         &none          &none   &kp SPACE               &none      &none       &none       &none      &none
@@ -437,10 +437,10 @@
         bindings = <
         &kp F1         &kp F2   &kp F3      &kp F4      &kp F5                                                                                         &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
         &kp EQUAL      &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-        &kp TAB        &kp Q    &kp W       &kp E       &kp R       &kp T                                                                      &kp Y   &kp U   &kp I       &kp O       &kp P       &kp BSLH
-        &kp ESC        &kp A    &kp S       &kp D       &kp F       &kp G                                                                      &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
-        &kp GRAVE      &kp Z    &kp X       &kp C       &kp V       &kp B   &kp LSHFT   &kp LCTRL   &layer_td  &kp LGUI  &kp RCTRL &kp RSHFT   &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &kp PG_UP
-        &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp BSPC    &kp DEL     &kp LALT   &kp RALT  &kp RET   &kp SPACE           &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+        &kp TAB        &kp N1   &kp N2      &kp N3      &kp N4      &kp N5                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
+        &kp ESC        &kp Q    &kp W       &kp E       &kp R       &kp T                                                                      &kp Y   &kp U   &kp I       &kp O       &kp P       &kp LBKT
+        &kp GRAVE      &kp A    &kp S       &kp D       &kp F       &kp G   &kp LSHFT   &kp LCTRL   &tog QWERTY  &kp LGUI  &kp RCTRL &kp RSHFT   &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
+        &mo MAGIC      &kp HOME &kp END     &kp LEFT    &kp RIGHT           &kp C    &kp V     &kp LALT   &kp RALT  &kp N   &kp M           &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
         >;
     };
 
