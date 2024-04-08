@@ -64,14 +64,24 @@
     #endif
 
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 250 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 160 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
     
     #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #define HOMEY_REPEAT_DECAY 0 // "tap then hold" for key auto-repeat
     #endif
 
 
+    neh: not_eager_home {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = HOMEY_HOLDING_TYPE;
+      hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+      hold-trigger-on-release; // wait for other home row mods
+      tapping-term-ms = <HOMEY_HOLDING_TIME>;
+      quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+    }
     left_pinky: homey_left_pinky {
       compatible = "zmk,behavior-hold-tap";
       flavor = HOMEY_HOLDING_TYPE;
@@ -80,7 +90,6 @@
       hold-while-undecided;
       tapping-term-ms = <HOMEY_HOLDING_TIME>;
       quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-      require-prior-idle-ms = <125>;
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
     };
