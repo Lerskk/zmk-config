@@ -111,15 +111,15 @@
       bindings = <&skq>, <&kp>;
     };
 
-    #define lp(key) left_pinky PINKY_FINGER_MOD key
-    #define lr1(key) left_pinky RING1_FINGER_MOD key
-    #define lr2(key) left_pinky RING2_FINGER_MOD key
+    #define lp(key) neh PINKY_FINGER_MOD key
+    #define lr1(key) neh RING1_FINGER_MOD key
+    #define lr2(key) neh RING2_FINGER_MOD key
     #define lm(key) left_pinky MIDDY_FINGER_MOD key
     #define li(key) left_pinky INDEX_FINGER_MOD key
 
-    #define rp(key) left_pinky PINKY_FINGER_MOD key
-    #define rr1(key) left_pinky RING1_FINGER_MOD key
-    #define rr2(key) left_pinky RING2_FINGER_MOD key
+    #define rp(key) neh PINKY_FINGER_MOD key
+    #define rr1(key) neh RING1_FINGER_MOD key
+    #define rr2(key) neh RING2_FINGER_MOD key
     #define rm(key) left_pinky MIDDY_FINGER_MOD key
     #define ri(key) left_pinky INDEX_FINGER_MOD key
 
@@ -291,8 +291,8 @@
         &none   &none      &none    &none    &none                                                                                                                          &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
         &none   &none      &none    &none    &none    &none                                                                                                  &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &none   &kp DOT    &kp N4   &kp N0   &kp N5   &kp MINUS                                                                                           &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
-        &none   &lp(N6)    &kp N3   &kp N1   &kp N2   &kp PLUS                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
-        &none   &sp(N5)    &kp N7   &kp N9   &kp N8   &kp FSLH    &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
+        &none   &lp(N6)    &lr1(N3)   &lm(N1)   &li(N2)   &kp PLUS                                                                                            &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
+        &none   &sp(N5)    &sr(N7)   &sm(N9)   &si(N8)   &kp FSLH    &none    &none    &none   &none   &none   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
         &none   &none      &none    &none    &none                &trans   &trans   &none   &none   &none   &thumb_repeat SYMBOLS 0       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
