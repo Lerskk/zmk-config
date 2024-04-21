@@ -68,7 +68,7 @@
     #endif
     
     #ifndef HOMEY_REPEAT_DECAY
-    #define HOMEY_REPEAT_DECAY 0 // "tap then hold" for key auto-repeat
+    #define HOMEY_REPEAT_DECAY 220 // "tap then hold" for key auto-repeat
     #endif
 
 
@@ -82,6 +82,7 @@
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
     };
+
     left_pinky: homey_left_pinky {
       compatible = "zmk,behavior-hold-tap";
       flavor = HOMEY_HOLDING_TYPE;
