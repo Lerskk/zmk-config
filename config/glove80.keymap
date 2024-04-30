@@ -334,7 +334,7 @@
         &none       &none                  &none                  &none                  &kp DEL                &kp INS                                                                        &none       &none      &none       &none       &none      &none
         &kp SBAR    &kp SPACE              &kp UNDO               &kp REDO               &kp BSPC               &kp CUT                                                                        &kp CUT     &none      &none       &none       &none      &none
         &kp SURL    &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &kp COPY                                                                       &kp COPY    &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT  &none
-        &kp LC(T)   &kp LC(F)              &none                  &none                  &kp SALL               &kp PASTE   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none       &kp PASTE   &kp HOME   &kp PG_UP   &kp PG_DN   &kp END    &none
+        &kp LC(T)   &kp LC(F)              &none                  &none                  &kp SALL               &kp PASTE   &kp TAB   &none   &tog CURSOR   &tog CURSOR    &none   &none       &kp PASTE   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END    &none
         &kp LC(W)   &kp FPRE               &none                  &none                  &kp FNEX                           &none     &none   &none         &none          &none   &kp SPACE               &none      &none       &none       &none      &none
         >;
     };
@@ -370,9 +370,9 @@
         bindings = <
         &none   &none       &none       &none         &none                                                                                                     &none       &none      &none       &none       &none
         &none   &none       &none       &none         &none       &none                                                                             &none       &none       &none      &none       &none       &none
-        &none   &kp AT      &kp A       &kp DLLR      &kp C       &kp PRCNT                                                                         &kp COLON   &kp MINUS   &kp PLUS   &kp FSLH    &kp ASTRK   &none
+        &none   &kp LT      &kp TILDE   &kp EQUAL     &kp GT      &kp SEMI                                                                          &kp SQT     &kp PLUS    &kp MINUS  &kp ASTRK   &kp FSLH   &none
         &none   &lp(N6)     &lr1(N3)    &lm(N1)       &li(N2)     &kp N7                                                                            &kp N9      &ri(N4)     &rm(N0)    &rr1(N5)    &rp(N8)     &none
-        &none   &kp LT      &kp GT      &kp EQUAL     &kp TILDE   &kp TAB     &none   &none   &none         &kp LT      &kp GT          &kp EQUAL   &none       &none       &kp DOT    &kp COMMA   &none       &none
+        &none   &kp AT      &kp UNDER   &kp DLLR      &kp HASH    &none       &none   &none   &none         &kp LT      &kp GT          &kp EQUAL   &kp PRCNT   &kp EXCL       &kp DOT    &kp COMMA   &kp BSLH       &none
         &none   &none       &none       &none         &none                   &none   &none   &tog NUMBER   &kp COMMA   &kp BACKSPACE   &kp SPACE           &trans      &trans     &trans      &trans      &none
         >;
     };
