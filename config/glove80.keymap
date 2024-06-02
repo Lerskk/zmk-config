@@ -175,7 +175,7 @@
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <270>;
-      quick-tap-ms = <300>; // enable repeat
+      quick-tap-ms = <0>; // enable repeat
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
     };
