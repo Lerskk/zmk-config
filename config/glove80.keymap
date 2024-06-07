@@ -197,6 +197,27 @@
       #binding-cells = <2>;
       bindings = <&mo>, <&sk>;
     };
+    
+    morph_dot: morph_dot {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp DOT>, <&kp COLON>
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    morph_comma: morph_comma {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp COMMA>, <&kp SEMI>
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    morph_ques: morph_ques {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp QMARK>, <&kp EXCL>
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
 
     // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
     // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
@@ -260,7 +281,7 @@
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &cappy CAPSLOCK 0     &kp B              &lr2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
         &kp TAB     &lp(N)      &lr1(R)   &lm(T)   &li(S)   &kp G                                                                                                  &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
-        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION DEL    &skq LSHFT   &tog QWERTY   &none    &kp LEFT                   &kp ESC   &kp K     &kp P            &kp DOT         &kp COMMA        &kp FSLH   &kp PG_UP
+        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION DEL    &skq LSHFT   &tog QWERTY   &none    &kp LEFT                   &kp ESC   &kp K     &kp P            &morph_dot         &morph_comma        &morph_ques   &kp PG_UP
         &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE   &thumb CURSOR BACKSPACE   &lower   &lower   &thumb_repeat MEDIA 0   &thumb_sticky SYMBOLS LSHFT       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
