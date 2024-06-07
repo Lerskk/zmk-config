@@ -201,21 +201,21 @@
     morph_dot: morph_dot {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp DOT>, <&kp COLON>
+      bindings = <&kp DOT>, <&kp COLON>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
     morph_comma: morph_comma {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp COMMA>, <&kp SEMI>
+      bindings = <&kp COMMA>, <&kp SEMI>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
     morph_ques: morph_ques {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp QMARK>, <&kp EXCL>
+      bindings = <&kp QMARK>, <&kp EXCL>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
     };
 
