@@ -389,12 +389,12 @@
         // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
         bindings = <
-        &none   &none       &none       &none         &none                                                                                                     &none       &none      &none       &none       &none
-        &none   &none       &none       &none         &none       &none                                                                             &none       &none       &none      &none       &none       &none
-        &none   &kp LT      &kp TILDE   &kp EQUAL     &kp GT      &kp SEMI                                                                          &kp SQT     &kp PLUS    &kp MINUS  &kp ASTRK   &kp FSLH   &none
-        &none   &lp(N6)     &lr1(N3)    &lm(N1)       &li(N2)     &kp N7                                                                            &kp N9      &ri(N4)     &rm(N0)    &rr1(N5)    &rp(N8)     &none
-        &none   &kp AT      &kp UNDER   &kp DLLR      &kp HASH    &none       &none   &none   &none         &kp LT      &kp GT          &kp EQUAL   &kp PRCNT   &kp EXCL       &kp DOT    &kp COMMA   &kp BSLH       &none
-        &none   &none       &none       &none         &none                   &none   &none   &tog NUMBER   &kp COMMA   &kp BACKSPACE   &kp SPACE           &trans      &trans     &trans      &trans      &none
+        &none   &none       &none      &none     &none                                                                        &none       &none       &none        &none         &none
+        &none   &none       &none      &none     &none     &none                                                              &none       &none       &none        &none         &none       &none
+        &none   &kp PRCNT   &kp N7     &kp N8    &kp N9    &morph_comma                                                       &kp DLLR    &kp LT      &kp LBKT     &kp RBKT      &kp GT      &none
+        &none   &lp(N0)     &lr1(N1)   &lm(N2)   &li(N3)   &morph_dot                                                         &kp CARET   &ri(LPAR)   &rm(MINUS)   &rr1(EQUAL)   &rp(RPAR)   &none
+        &none   &kp TILDE   &kp N4     &kp N5    &kp N6    &kp AT       &none   &none   &none         &none   &none   &none   &kp PRCNT   &kp PLUS    &kp UNDER    &kp ASTRK     &kp FSLH    &none
+        &none   &none       &none      &none     &none                  &none   &none   &tog NUMBER   &none   &none   &none   &trans      &trans      &trans       &trans        &none
         >;
     };
 
@@ -408,12 +408,12 @@
         // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
         bindings = <
-        &none   &none      &none         &none        &none                                                                                                  &none       &none       &none        &none       &none
-        &none   &none      &none         &none        &none       &none                                                                          &none       &none       &none       &none        &none       &none
-        &none   &kp HASH   &kp CARET     &kp DLLR     &kp ASTRK   &kp SEMI                                                                       &kp COLON   &kp GRAVE   &kp LBKT    &kp RBKT     &kp PRCNT   &none
-        &none   &lp(LT)    &lr1(MINUS)   &lm(EQUAL)   &li(GT)     &kp COMMA                                                                      &kp DOT     &ri(LPAR)   &rm(LBRC)   &rr1(RBRC)   &rp(RPAR)   &none
-        &none   &kp AT     &kp UNDER     &kp BSLH     &kp TILDE   &kp AMPS    &none       &none           &none   &none          &none   &none   &kp PIPE    &kp EXCL    &kp FSLH    &kp DQT      &kp QMARK   &none
-        &none   &none      &none         &none        &none                   &kp SPACE   &kp BACKSPACE   &none   &tog SYMBOLS   &none   &none               &none       &none       &none        &none       &none
+        &none   &none       &none         &none        &none                                                                         &none       &none       &none       &none        &none
+        &none   &none       &none         &none        &none      &none                                                              &none       &none       &none       &none        &none       &none
+        &none   &kp PRCNT   &kp CARET     &kp DLLR     &kp HASH   &morph_comma                                                       &kp SQT     &kp GRAVE   &kp LBKT    &kp RBKT     &kp BSLH    &none
+        &none   &lp(LT)     &lr1(MINUS)   &lm(EQUAL)   &li(GT)    &morph_dot                                                         &kp QMARK   &ri(LPAR)   &rm(LBRC)   &rr1(RBRC)   &rp(RPAR)   &none
+        &none   &kp TILDE   &kp UNDER     &kp PIPE     &kp AMPS   &kp AT       &none   &none   &none         &none   &none   &none   &kp EXCL    &kp PLUS    &kp MINUS   &kp ASTRK    &kp FSLH    &none
+        &none   &none       &none         &none        &none                   &none   &none   &tog NUMBER   &none   &none   &none   &trans      &trans      &trans      &trans       &none
         >;
     };
 
