@@ -394,7 +394,7 @@
         &none   &kp PRCNT   &kp N7     &kp N8    &kp N9    &morph_comma                                                       &kp DLLR    &kp LT      &kp LBKT     &kp RBKT      &kp GT      &none
         &none   &lp(N0)     &lr1(N1)   &lm(N2)   &li(N3)   &morph_dot                                                         &kp CARET   &ri(LPAR)   &rm(MINUS)   &rr1(EQUAL)   &rp(RPAR)   &none
         &none   &kp TILDE   &kp N4     &kp N5    &kp N6    &kp AT       &none   &none   &none         &none   &none   &none   &kp PRCNT   &kp PLUS    &kp UNDER    &kp ASTRK     &kp FSLH    &none
-        &none   &none       &none      &none     &none                  &none   &none   &tog NUMBER   &none   &none   &none   &trans      &trans      &trans       &trans        &none
+        &none   &none       &none      &none     &none                  &none   &none   &tog NUMBER   &none   &kp BACKSPACE   &kp SPACE   &trans      &trans      &trans       &trans        &none
         >;
     };
 
@@ -412,8 +412,8 @@
         &none   &none       &none         &none        &none      &none                                                              &none       &none       &none       &none        &none       &none
         &none   &kp PRCNT   &kp CARET     &kp DLLR     &kp HASH   &morph_comma                                                       &kp SQT     &kp GRAVE   &kp LBKT    &kp RBKT     &kp BSLH    &none
         &none   &lp(LT)     &lr1(MINUS)   &lm(EQUAL)   &li(GT)    &morph_dot                                                         &kp QMARK   &ri(LPAR)   &rm(LBRC)   &rr1(RBRC)   &rp(RPAR)   &none
-        &none   &kp TILDE   &kp UNDER     &kp PIPE     &kp AMPS   &kp AT       &none   &none   &none         &none   &none   &none   &kp EXCL    &kp PLUS    &kp MINUS   &kp ASTRK    &kp FSLH    &none
-        &none   &none       &none         &none        &none                   &none   &none   &tog NUMBER   &none   &none   &none   &trans      &trans      &trans      &trans       &none
+        &none   &kp TILDE   &kp UNDER     &kp PIPE     &kp AMPS   &kp AT       &none       &none   &none   &none   &none   &none   &kp EXCL    &kp PLUS    &kp MINUS   &kp ASTRK    &kp FSLH    &none
+        &none   &none       &none         &none        &none                   &kp SPACE   &kp BACKSPACE   &tog NUMBER   &none   &none   &none   &trans      &trans      &trans      &trans       &none
         >;
     };
 
