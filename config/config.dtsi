@@ -13,9 +13,10 @@
 #define FUNCTION 10
 #define MEDIA 11
 #define QWERTY 12
-#define PLOVER 13
-#define LOWER 14
-#define MAGIC 15
+#define TYPEG 13
+#define PLOVER 14
+#define LOWER 15
+#define MAGIC 16
 
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
