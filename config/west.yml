@@ -8,12 +8,14 @@ manifest:
       url-base: https://github.com/lerskk
     - name: klausweiss
       url-base: https://github.com/klausweiss
+    - name: star-key
+      url-base: https://github.com/ssbb/
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: lerskk 
-      revision: dev
+      remote: star 
+      revision: main
       import: app/west.yml
   self:
     path: config
