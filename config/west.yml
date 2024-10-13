@@ -8,14 +8,14 @@ manifest:
       url-base: https://github.com/lerskk
     - name: klausweiss
       url-base: https://github.com/klausweiss
-    - name: ssbb
-      url-base: https://github.com/ssbb/
+    - name: voidyourwarranty2
+      url-base: https://github.com/voidyourwarranty2
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: ssbb 
-      revision: main
+      remote: voidyourwarranty2
+      revision: devel-adaptive
       import: app/west.yml
   self:
     path: config
