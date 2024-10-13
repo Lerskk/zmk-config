@@ -301,7 +301,7 @@
         &none  &kp Q  &lr2(Y)    &kp O     &kp U      &kp MINUS                                                                                             &kp J   &kp G  &kp N  &rr2(W)  &kp K  &none    
         &none  &lp(H)  &lr1(I)    &lm(E)     &li(A)      &kp DOT                                                                                               &kp P   &ri(D)  &rm(R)  &rr1(S)  &rp(L)  &kp Z
         &none  &kp X  &kp FSLH  &kp SQT  &kp COMMA  &kp SEMI   &thumb FUNCTION BACKSPACE  &none                 &none    &tog NORD  &none                &none  &kp B   &kp C  &kp M  &kp F  &kp V  &none
-        &none  &none  &none    &none     &none                 &thumb NUMBER SPACE  &htl_arcane CURSOR 0  &none    &none      &htr_arcane MEDIA 0  &kp T         &none   &none  &none  &none  &none
+        &none  &none  &none    &none     &none                 &thumb NUMBER SPACE  &htl_arcane CURSOR 0  &none    &none      &htr_arcane MEDIA 0  &thumb SYMBOLS T         &none   &none  &none  &none  &none
         >;
     };
 
