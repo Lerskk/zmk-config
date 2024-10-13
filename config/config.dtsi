@@ -1,18 +1,18 @@
 
 // layers
 #define DEFAULT 0
-#define DESONE 1
-#define DESTWO 2
-#define NUMPAD 3
-#define FNPAD 4
-#define DNAV 5
-#define CURSOR 6
-#define MOUSE 7
-#define NUMBER 8
-#define SYMBOLS 9
-#define FUNCTION 10
-#define MEDIA 11
-#define NORD 12
+#define NORD 1
+#define DESONE 2
+#define DESTWO 3
+#define NUMPAD 4
+#define FNPAD 5
+#define DNAV 6
+#define CURSOR 7
+#define MOUSE 8
+#define NUMBER 9
+#define SYMBOLS 10
+#define FUNCTION 11
+#define MEDIA 12
 #define TYPEG 13
 #define PLOVER 14
 #define LOWER 15

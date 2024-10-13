@@ -286,6 +286,25 @@
         >;
     };
 
+    nord_layer {
+        // ---------------------------------------------------------------------------------------------------------------------------------
+        // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
+        // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
+        // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
+        // |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
+        // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
+        // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
+
+        bindings = <
+        &none  &none  &none    &none     &none                                                                                                                    &none  &none  &none  &none  &none
+        &none  &none  &none    &none     &none      &none                                                                                                 &none   &none  &none  &none  &none  &none
+        &none  &kp Q  &lr2(Y)    &kp O     &kp U      &kp MINUS                                                                                             &kp J   &kp G  &kp N  &rr2(W)  &kp K  &none    
+        &none  &lp(H)  &lr1(I)    &lm(E)     &li(A)      &kp DOT                                                                                               &kp P   &ri(D)  &rm(R)  &rr1(S)  &rp(L)  &kp Z
+        &none  &kp X  &kp FSLH  &kp SQT  &kp COMMA  &kp SEMI   &thumb FUNCTION BACKSPACE  &none                 &none    &tog NORD  &none                &none  &kp B   &kp C  &kp M  &kp F  &kp V  &none
+        &none  &none  &none    &none     &none                 &thumb NUMBER SPACE  &htl_arcane CURSOR 0  &none    &none      &htr_arcane MEDIA 0  &kp T         &none   &none  &none  &none  &none
+        >;
+    };
+
     design_one_layer {
         bindings = <
         &none   &none    &none     &none   &none                                                                                                                               &kp F6           &kp F7           &kp F8          &kp F9      &kp F10
@@ -453,25 +472,6 @@
         &none   &kp PINKY_FINGER_MOD   &kp RING1_FINGER_MOD   &kp MIDDY_FINGER_MOD   &kp INDEX_FINGER_MOD   &none   &none   &kp F4     &mt C_MUTE C_VOL_DN   &kp C_VOL_UP   &none   &none
         &none   &none   &none   &none   &none   &none   &none         &none         &none   &none   &none   &none   &none   &kp C_PP   &kp C_PREV            &kp C_NEXT     &none   &none
         &none   &none   &none   &none   &none           &none         &none         &none   &none   &none   &none           &none      &none                 &none          &none   &none
-        >;
-    };
-
-    nord_layer {
-        // ---------------------------------------------------------------------------------------------------------------------------------
-        // |  F1   |  F2 |  F3 |  F4  |  F5  |                                                               |  F6   |  F7   |  F8  |   F9  |  F10 |
-        // |  =    |  1  |  2  |  3   |  4   |  5   |                                                 |  6   |   7   |   8   |  9   |   0   |   -  |
-        // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                                                 |  Y   |   U   |   I   |  O   |   P   |   \  |
-        // |  ESC  |  A  |  S  |  D   |  F   |  G   |                                                 |  H   |   J   |   K   |  L   |   ;   |   '  |
-        // |   `   |  Z  |  X  |  C   |  V   |  B   | LSHFT | LCTRL | LOWER | | LGUI  | RCTRL | RSHFT |  N   |   M   |   ,   |  .   |   /   | PGUP |
-        // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
-
-        bindings = <
-        &none  &none  &none    &none     &none                                                                                                                    &none  &none  &none  &none  &none
-        &none  &none  &none    &none     &none      &none                                                                                                 &none   &none  &none  &none  &none  &none
-        &none  &kp Q  &kp Y    &kp O     &kp U      &kp MINUS                                                                                             &kp J   &kp G  &kp N  &kp W  &kp K  &none    
-        &none  &kp H  &kp I    &kp E     &kp A      &kp DOT                                                                                               &kp P   &kp D  &kp R  &kp S  &kp L  &kp Z
-        &none  &kp X  &kp FSLH  &kp SQT  &kp COMMA  &kp SEMI   &thumb FUNCTION BACKSPACE  &none                 &none    &tog NORD  &none                &none  &kp B   &kp C  &kp M  &kp F  &kp V  &none
-        &none  &none  &none    &none     &none                 &thumb NUMBER SPACE  &htl_arcane CURSOR 0  &none    &none      &htr_arcane MEDIA 0  &kp T         &none   &none  &none  &none  &none
         >;
     };
 
