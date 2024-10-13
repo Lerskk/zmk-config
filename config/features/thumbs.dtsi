@@ -51,7 +51,7 @@
                        A   B          I       Q        X      Y \
                        >; \
         bindings =    < \
-                       &nd &mc_ecause &mc_on  &mc_ueen &mc_ex &mc_eah \
+                       &mc_nd &mc_ecause &mc_on  &mc_ueen &mc_ex &mc_eah \
                        >; \
     };
 
