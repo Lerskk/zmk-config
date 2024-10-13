@@ -27,6 +27,34 @@
     //                        >; \
     //     };
 
+    #define LEFT_ARCANE(NAME, DEFAULT) \
+      NAME: NAME { \
+        compatible = "zmk,behavior-antecedent-morph"; \
+        #binding-cells = <0>; \
+        max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+        defaults = <DEFAULT>; \
+        antecedents = < \
+                       B     C      E      F     G     H     O     P     R     S     T     U     W     Y     \
+                       >; \
+        bindings =    < \
+                       &mc_ecause &kp S  &kp U  &kp Y &kp S &kp Y &kp A &kp H &kp L &kp C &kp M &kp E &kp S &kp P \
+                       >; \
+    };
+
+    #define RIGHT_ARCANE(NAME, DEFAULT) \
+      NAME: NAME { \
+        compatible = "zmk,behavior-antecedent-morph"; \
+        #binding-cells = <0>; \
+        max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
+        defaults = <DEFAULT>; \
+        antecedents = < \
+                       B     C      E      F     G     H     O     P     R     S     T     U     W     Y     \
+                       >; \
+        bindings =    < \
+                       &mc_ecause &kp S  &kp U  &kp Y &kp S &kp Y &kp A &kp H &kp L &kp C &kp M &kp E &kp S &kp P \
+                       >; \
+    };
+
     #define SMART_MAGIC(NAME, DEFAULT) \
       NAME: NAME { \
         compatible = "zmk,behavior-antecedent-morph"; \
@@ -40,18 +68,6 @@
                        &kp O &kp S  &kp U  &kp Y &kp S &kp Y &kp A &kp H &kp L &kp C &kp M &kp E &kp S &kp P \
                        >; \
     };
-    // #define SMART_MAGIC(NAME, LABEL, DEFAULT) \
-    //     NAME: NAME { \
-    //         compatible = "zmk,behavior-antecedent-morph"; \
-    //         label = LABEL; \
-    //         #binding-cells = <0>; \
-    //         max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
-    //         defaults = <DEFAULT>; \
-    //         antecedents = <A>; \
-    //         bindings =    <&kp O>; \
-    //     };
-
-
     
 
     thumbs {
@@ -105,6 +121,8 @@
         // ******************** SMART SHIFT / MAGIC KEY ******************** //
 
         SMART_MAGIC(smart_shift_magic, &key_repeat)
+        LEFT_ARCANE(left_arcane, &key_repeat)
+        RIGHT_ARCANE(right_arcane, &key_repeat)
         // SMART_MAGIC(smart_shift_magic, "smart_shift_magic", &shift_caps_word)
 
         ht_magic: ht_magic {
@@ -114,6 +132,24 @@
           flavor = "tap-preferred";
           quick-tap-ms = <QUICK_TAP_TERM>;
           bindings = <&mo>, <&smart_shift_magic>;
+        };
+
+        htl_arcane: htl_arcane {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          tapping-term-ms = <TAPPING_TERM>;
+          flavor = "tap-preferred";
+          quick-tap-ms = <QUICK_TAP_TERM>;
+          bindings = <&mo>, <&left_arcane>;
+        };
+
+        htr_arcane: htr_arcane {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          tapping-term-ms = <TAPPING_TERM>;
+          flavor = "tap-preferred";
+          quick-tap-ms = <QUICK_TAP_TERM>;
+          bindings = <&mo>, <&right_arcane>;
         };
 
 

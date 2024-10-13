@@ -12,7 +12,7 @@
 #define SYMBOLS 9
 #define FUNCTION 10
 #define MEDIA 11
-#define QWERTY 12
+#define NORD 12
 #define TYPEG 13
 #define PLOVER 14
 #define LOWER 15
