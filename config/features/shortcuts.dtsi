@@ -7,6 +7,15 @@
             tap-ms = <10>; \
             bindings = <BINDINGS>; \
         };
+
+    #define FAST_SHORTCUT(NAME, BINDINGS) \
+        NAME: NAME { \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            bindings = <BINDINGS>; \
+        };
     
 
     shortcuts {
@@ -15,6 +24,24 @@
         SHORTCUT(mc_o_esc,                  &macro_tap &kp O &kp ESC)
         SHORTCUT(mc_sft_o_esc,              &macro_tap &kp LS(O) &kp ESC)
 
-        SHORTCUT(mc_ecause,                &macro_tap &kp E &kp C &kp A &kp U &kp S &kp E)
+        // left arcane
+        FAST_SHORTCUT(mc_a,                &macro_tap &kp A &kp SPACE) // a
+        FAST_SHORTCUT(mc_ecause,                &macro_tap &kp E &kp C &kp A &kp U &kp S &kp E) // b
+        FAST_SHORTCUT(mc_an,                &macro_tap &kp A &kp N) // c
+        FAST_SHORTCUT(mc_eneral,                &macro_tap &kp E &kp N &kp E &kp R &kp A &kp L) // g
+        FAST_SHORTCUT(mc_ust,                &macro_tap &kp U &kp S &kp T) // j
+        FAST_SHORTCUT(mc_ent,                &macro_tap &kp E &kp N &kp T) // M
+        FAST_SHORTCUT(mc_ion,                &macro_tap &kp I &kp O &kp N) // i
+        FAST_SHORTCUT(mc_retty,                &macro_tap &kp R &kp E &kp T &kp T &kp Y) // p
+        FAST_SHORTCUT(mc_hich,                &macro_tap &kp H &kp I &kp C &kp H) // W
+
+        // right arcane
+        FAST_SHORTCUT(mc_nd,                &macro_tap &kp A &kp N &kp D &kp SPACE) // a
+        FAST_SHORTCUT(mc_on,                &macro_tap &kp O &kp N) // i
+        FAST_SHORTCUT(mc_ueen,                &macro_tap &kp U &kp E &kp E &kp N) // q
+        FAST_SHORTCUT(mc_ex,                &macro_tap &kp E &kp X) // x
+        FAST_SHORTCUT(mc_eah,                &macro_tap &kp E &kp A &kp H) // y
+        FAST_SHORTCUT(mc_but,                &macro_tap &kp SPACE &kp B &kp U &kp T) // comma
+        FAST_SHORTCUT(mc_the,                &macro_tap &kp T &kp H &kp E) // space
     };
 };

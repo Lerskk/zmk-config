@@ -466,12 +466,12 @@
         // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
         bindings = <
-        &kp F4         &kp F5      &kp F1   &kp F2      &kp F3                                                                                         &kp F6  &kp F7      &kp F8      &kp F9      &kp F10
-        &kp EQUAL      &kp N5      &kp N1   &kp N2      &kp N3      &kp N4                                                                     &kp N6  &kp N7  &kp N8      &kp N9      &kp N0      &kp MINUS
-        &kp T          &kp TAB     &kp Q    &kp W       &kp E       &kp R                                                                      &kp T   &kp Y   &kp U       &kp I       &kp O       &kp P    
-        &kp G          &kp LSHFT   &kp A    &kp S       &kp D       &kp F                                                                      &kp G   &kp H   &kp J       &kp K       &kp L       &kp SEMI
-        &kp V          &kp LCTRL   &kp Z    &kp X       &kp C       &kp V   &kp ESC   &kp ENTER   &tog TYPEG  &tog NORD &kp RCTRL &kp RSHFT  &kp B   &kp N   &kp M       &kp COMMA       &kp DOT    &kp FSLH
-        &none          &kp H       &kp B    &kp N       &kp M               &kp SPACE &htl_arcane CURSOR 0    &kp LGUI   &htr_arcane MEDIA 0  &kp N   &kp M           &kp UP  &kp DOWN    &kp LBKT    &kp RBKT    &kp PG_DN
+        &none  &none  &none    &none     &none                                                                                                                    &none  &none  &none  &none  &none
+        &none  &none  &none    &none     &none      &none                                                                                                 &none   &none  &none  &none  &none  &none
+        &none  &kp Q  &kp Y    &kp O     &kp U      &kp MINUS                                                                                             &kp J   &kp G  &kp N  &kp W  &kp K  &none    
+        &none  &kp H  &kp I    &kp E     &kp A      &kp DOT                                                                                               &kp P   &kp D  &kp R  &kp S  &kp L  &kp Z
+        &none  &kp X  &kp FSLH  &kp SQT  &kp COMMA  &kp SEMI   &none                &none                 &none    &tog NORD  &none                &none  &kp B   &kp C  &kp M  &kp F  &kp V  &none
+        &none  &none  &none    &none     &none                 &thumb NUMBER SPACE  &htl_arcane CURSOR 0  &none    &none      &htr_arcane MEDIA 0  &kp T         &none   &none  &none  &none  &none
         >;
     };
 
