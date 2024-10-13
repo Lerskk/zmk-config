@@ -34,10 +34,10 @@
         max-delay-ms = <ADAPTIVE_KEY_TIMEOUT>; \
         defaults = <DEFAULT>; \
         antecedents = < \
-                       A     B          C      G          J       M       N       P         W        COMM    \
+                       A     B          C      G          J       M       N       P         W \
                        >; \
         bindings =    < \
-                       &mc_a &mc_ecause &mc_an &mc_eneral &mc_ust &mc_ent &mc_ion &mc_retty &mc_hich &mc_and \
+                       &mc_a &mc_ecause &mc_an &mc_eneral &mc_ust &mc_ent &mc_ion &mc_retty &mc_hich \
                        >; \
     };
 
