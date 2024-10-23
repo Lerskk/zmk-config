@@ -127,7 +127,7 @@
     #define sp(key) sticky_home PINKY_FINGER_MOD key
     #define sr(key) sticky_home RING1_FINGER_MOD key
     #define sm(key) sticky_home MIDDY_FINGER_MOD key
-    #define si(key) sticky_home INDEX_FINGER_MOD key
+    #define si(key) sticky_home RCTL key
 
     lower: lower {
       compatible = "zmk,behavior-tap-dance";
