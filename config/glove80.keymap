@@ -115,18 +115,18 @@
     #define lp(key) neh PINKY_FINGER_MOD key
     #define lr1(key) neh RING1_FINGER_MOD key
     #define lr2(key) neh RING2_FINGER_MOD key
-    #define lm(key) left_pinky MIDDY_FINGER_MOD key
-    #define li(key) left_pinky INDEX_FINGER_MOD key
+    #define lm(key) left_pinky LSFT key
+    #define li(key) left_pinky LCTL key
 
     #define rp(key) neh PINKY_FINGER_MOD key
     #define rr1(key) neh RING1_FINGER_MOD key
     #define rr2(key) neh RING2_FINGER_MOD key
-    #define rm(key) left_pinky MIDDY_FINGER_MOD key
+    #define rm(key) left_pinky RCTL key
     #define ri(key) left_pinky RCTL key
 
     #define sp(key) sticky_home PINKY_FINGER_MOD key
     #define sr(key) sticky_home RING1_FINGER_MOD key
-    #define sm(key) sticky_home MIDDY_FINGER_MOD key
+    #define sm(key) sticky_home RSFT key
     #define si(key) sticky_home RCTL key
 
     lower: lower {
