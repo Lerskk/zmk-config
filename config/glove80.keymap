@@ -121,7 +121,7 @@
     #define rp(key) neh PINKY_FINGER_MOD key
     #define rr1(key) neh RING1_FINGER_MOD key
     #define rr2(key) neh RING2_FINGER_MOD key
-    #define rm(key) left_pinky RCTL key
+    #define rm(key) left_pinky RSFT key
     #define ri(key) left_pinky RCTL key
 
     #define sp(key) sticky_home PINKY_FINGER_MOD key
