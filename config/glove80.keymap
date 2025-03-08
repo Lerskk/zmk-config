@@ -64,7 +64,7 @@
     #endif
 
     #ifndef HOMEY_HOLDING_TIME
-    #define HOMEY_HOLDING_TIME 150 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
+    #define HOMEY_HOLDING_TIME 170 // TAPPING_TERM + ALLOW_CROSSOVER_AFTER
     #endif
     
     #ifndef HOMEY_REPEAT_DECAY
@@ -174,7 +174,7 @@
     thumb: thumb_layer_access {
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
-      tapping-term-ms = <270>;
+      tapping-term-ms = <200>;
       quick-tap-ms = <0>; // enable repeat
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
@@ -183,7 +183,7 @@
     thumb_repeat: thumb_layer_access_repeat {
       compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
-      tapping-term-ms = <270>;
+      tapping-term-ms = <200>;
       quick-tap-ms = <300>; // enable repeat
       #binding-cells = <2>;
       bindings = <&mo>, <&key_repeat>;
@@ -192,7 +192,7 @@
     thumb_sticky: thumb_layer_access_sticky {
       compatible = "zmk,behavior-hold-tap";
       flavor = "tap-preferred";
-      tapping-term-ms = <270>;
+      tapping-term-ms = <200>;
       quick-tap-ms = <300>; // enable repeat
       #binding-cells = <2>;
       bindings = <&mo>, <&sk>;
@@ -281,8 +281,8 @@
         &kp EQUAL   &kp N1             &kp N2          &kp N3          &kp N4          &kp N5                                                                                                 &kp N6    &kp N7           &kp N8           &kp N9          &kp N0      &kp MINUS
         &none     &kp B              &lr2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
         &cappy CAPSLOCK 0     &lp(N)      &lr1(R)   &lm(T)   &li(S)   &kp G                                                                                                  &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
-        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION BACKSPACE    &none   &tog PLOVER   &tog NORD    &kp LEFT                   &kp ESC   &kp K     &kp P            &morph_dot         &morph_comma        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE   &htl_arcane CURSOR 0   &lower   &lower   &htr_arcane MEDIA 0   &thumb_sticky SYMBOLS LSHFT       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION MINUS    &none   &tog PLOVER   &tog NORD    &kp LEFT                   &kp ESC   &kp K     &kp P            &morph_dot         &morph_comma        &kp FSLH   &kp PG_UP
+        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE   &thumb CURSOR UNDER    &lower   &lower   &thumb MEDIA ENTER   &thumb_sticky SYMBOLS BACKSPACE       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
