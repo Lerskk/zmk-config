@@ -282,7 +282,7 @@
         &none     &kp B              &lr2(L)   &kp D           &kp W           &kp Z                                                                                                  &kp SQT   &kp F            &kp O            &rr2(U)  &kp J       &kp SEMI
         &cappy CAPSLOCK 0     &lp(N)      &lr1(R)   &lm(T)   &li(S)   &kp G                                                                                                  &kp Y     &ri(H)   &rm(A)   &rr1(E)  &rp(I)       &kp ENTER
         &kp GRAVE   &kp Q    &kp X     &kp M           &kp C           &kp V           &thumb FUNCTION MINUS    &none   &tog PLOVER   &tog NORD    &kp LEFT                   &kp ESC   &kp K     &kp P            &morph_dot         &morph_comma        &kp FSLH   &kp PG_UP
-        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE   &thumb CURSOR UNDER    &lower   &lower   &thumb MEDIA ENTER   &thumb_sticky SYMBOLS BACKSPACE       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
+        &mo MAGIC   &kp HOME &kp END   &kp DOWN          &kp UP                       &thumb NUMBER SPACE   &thumb CURSOR UNDER    &lower   &lower   &thumb MEDIA ENTER   &thumb SYMBOLS BACKSPACE       &kp LEFT           &kp RIGHT         &kp LBKT         &kp RBKT   &kp PG_DN
         >;
     };
 
