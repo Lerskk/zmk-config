@@ -115,7 +115,7 @@
 
     left_pinky: homey_left_pinky {
       compatible = "zmk,behavior-hold-tap";
-      flavor = HOMEY_HOLDING_TYPE;
+      flavor = "tap-preferred";
       hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
       hold-trigger-on-release; // wait for other home row mods
       hold-while-undecided;
@@ -136,7 +136,7 @@
 
     sticky_home: sticky_home {
       compatible = "zmk,behavior-hold-tap";
-      flavor = HOMEY_HOLDING_TYPE;
+      flavor = "tap-preferred";
       tapping-term-ms = <HOMEY_HOLDING_TIME>;
       #binding-cells = <2>;
       bindings = <&skq>, <&kp>;
