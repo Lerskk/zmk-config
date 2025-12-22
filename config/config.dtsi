@@ -1,7 +1,7 @@
 
 // layers
 #define DEFAULT 0
-#define NORD 1
+#define QWERTY 1
 #define DESONE 2
 #define DESTWO 3
 #define NUMPAD 4
