@@ -89,6 +89,7 @@
     #endif
 
     hml: home_row_timless_left {
+      compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <280>;
       quick-tap-ms = <175>;
@@ -100,6 +101,7 @@
     };
 
     hmr: home_row_timless_right {
+      compatible = "zmk,behavior-hold-tap";
       flavor = "balanced";
       tapping-term-ms = <280>;
       quick-tap-ms = <175>;
